@@ -217,6 +217,10 @@ def test_a4_module_outcomes(tmp_path, monkeypatch, evidence):
     module, out = execute(tmp_path, monkeypatch, structure_file=str(bad), chains_json='[]', top_n=3)
     assert out['report']['receipt']['error_code'] == 'unsupported_format'
     assert [v['render'] for v in module.visualize()] == ['text']
+    packed = tmp_path / 'packed.cif'
+    packed.write_bytes(b'\x1f\x8b' + b'0' * 64)
+    module, out = execute(tmp_path, monkeypatch, mmcif_file=str(packed), chains_json='[]', top_n=3)
+    assert out['report']['receipt']['error_code'] == 'unsupported_format'
     monkeypatch.setattr(predictor, 'TIMEOUT_SECONDS', 0.5)
     module, out = execute(tmp_path, monkeypatch, mmcif_file='fixtures/7L13.cif', chains_json='[]', top_n=3)
     assert out['report']['status'] == 'timeout' and out['pocket_count'] == 0
@@ -229,7 +233,7 @@ def test_a4_module_outcomes(tmp_path, monkeypatch, evidence):
     monkeypatch.setattr(predictor, 'invoke', failing)
     module, out = execute(tmp_path, monkeypatch, mmcif_file='fixtures/7L13.cif', chains_json='[]', top_n=3)
     assert out['report']['status'] == 'execution_failed' and out['report']['pockets'] == []
-    evidence.setdefault('A4', {})['module_outcomes'] = ['structure_input', 'unsupported_format', 'timeout', 'execution_failed']
+    evidence.setdefault('A4', {})['module_outcomes'] = ['structure_input', 'unsupported_format', 'compressed_upload', 'timeout', 'execution_failed']
 
 
 def test_a5_top1_versus_top3_and_view(tmp_path, monkeypatch, adapter_runs, evidence):

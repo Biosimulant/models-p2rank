@@ -115,6 +115,7 @@
     "module_outcomes": [
       "structure_input",
       "unsupported_format",
+      "compressed_upload",
       "timeout",
       "execution_failed"
     ]

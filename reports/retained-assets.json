@@ -1,0 +1,20 @@
+{
+  "scope": "Private infrastructure runs in workspace 016506d0-086a-41d5-85fe-8e8316719810 (Modal, Pro profile, free beta, $0 user charge); no protein inference",
+  "runs": [
+    {"run_id": "8bc54725-d761-4d75-b033-d8b6fc9bade1", "revision_id": "fe979811-e57a-46ef-a44a-4c6b8b52e74b", "lab_version": "0.1.0", "duration_seconds": 3.885, "estimated_provider_cost_usd_at_cap": 0.094969, "result": "runtime chunks (pre-trim) matched frozen lock; runtime-0 still current"},
+    {"run_id": "6ee4c080-15e9-4bff-b9eb-3665d8abda5e", "revision_id": "bf0d5fa4-161f-4306-a899-81c419d3b35d", "lab_version": "0.2.0", "duration_seconds": 4.542, "estimated_provider_cost_usd_at_cap": 0.094969, "result": "CIF artifacts retained with pinned digests but File import failed (upload_failed, upstream HTTP 400 for chemical/x-cif); .js/.txt outputs were not retained as artifacts"},
+    {"run_id": "589cbc6b-ef3d-4283-bd46-4d5fd12ec333", "revision_id": "810cb283-e002-47e9-99da-09b0805e1f62", "lab_version": "0.3.0", "duration_seconds": 24.445, "estimated_provider_cost_usd_at_cap": 0.094969, "result": "all six bundles match frozen lock (receipt all_match=true)"}
+  ],
+  "owned_files": {
+    "p2rank-runtime-0.zip": {"file_id": "03485424-c488-4649-bbb7-41e2bc2094df", "size_bytes": 50248580, "sha256": "9b84a3f3eb77d8f0ba6491ca5acfaadd2fb4c57de5d5b58a8bc9022a81a606db", "source_run": "8bc54725-d761-4d75-b033-d8b6fc9bade1"},
+    "p2rank-runtime-1.zip": {"file_id": "7cef413b-3705-448f-899d-9d8e6d955348", "size_bytes": 46645586, "sha256": "960ef240086f91e1a8dd12fadd59f106b53966585232847be99bb21e95e02d96", "source_run": "589cbc6b-ef3d-4283-bd46-4d5fd12ec333"},
+    "viewer-3dmol-2.5.5.zip": {"file_id": "eab13586-bfd0-42c3-96f7-9e9886a9c4b5", "size_bytes": 542287, "sha256": "7f2b3a16b60b3ce0a7b835e105c792e86db6192fd172fdca2bd7566ea843c1f8", "source_run": "589cbc6b-ef3d-4283-bd46-4d5fd12ec333"},
+    "reference-structures.zip": {"file_id": "a83f6d15-bea8-4c8f-9bba-34c0cdb62686", "size_bytes": 793072, "sha256": "a8397f7e28fb1fb7254104c6aa6db9263d51c4ae6a842ae00ba1a1e848356a19", "source_run": "589cbc6b-ef3d-4283-bd46-4d5fd12ec333"},
+    "license-records.zip": {"file_id": "54c9df9f-5465-40a9-bc07-96e5e7938ba8", "size_bytes": 951602, "sha256": "85827901f6ae5be738c0f72d407e7c027fb7486d7f3a8519be65fc39f545035f", "source_run": "589cbc6b-ef3d-4283-bd46-4d5fd12ec333"},
+    "corresponding-sources.zip": {"file_id": "fe2aa8d7-a093-449b-b375-bcecc0b5d458", "size_bytes": 31891277, "sha256": "a5f466f0895ff9f95b1622094d17f8781de6bdd17d72c95e53feb0eaae13bfc9", "source_run": "589cbc6b-ef3d-4283-bd46-4d5fd12ec333"}
+  },
+  "platform_findings": [
+    "Reusable File storage rejects mmCIF (content_type chemical/x-cif): file_import_from_run returns file_import_storage_failed / upstream HTTP 400; files left in upload_failed state",
+    "Managed runs do not retain file outputs declared with format js or txt (values remain container paths)"
+  ]
+}

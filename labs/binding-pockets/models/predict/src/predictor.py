@@ -1,4 +1,4 @@
-"""Offline finite adapter to exact P2Rank2.5.1 native inference."""
+"""Offline finite adapter to exact P2Rank 2.5.1 native inference."""
 from __future__ import annotations
 import csv,gzip,hashlib,html,io,json,math,os,shutil,signal,subprocess,tempfile,time,zipfile
 from pathlib import Path
@@ -62,7 +62,7 @@ def invoke(install,pdb,out,timeout):
             code=process.wait(timeout=timeout)
         except subprocess.TimeoutExpired:
             os.killpg(process.pid,signal.SIGKILL);process.wait();raise TimeoutError(f'Invocation exceeded frozen {TIMEOUT_SECONDS} second limit')
-    if code:raise RuntimeError(f'P2Rank exited with code{code}; retained predictor.log has diagnostic detail')
+    if code:raise RuntimeError(f'P2Rank exited with code {code}; retained predictor.log has diagnostic detail')
     return cmd
 
 def parse_outputs(out,name,prep,top_n):
@@ -102,14 +102,14 @@ def pocket_html(prep,pockets,receipt):
     payload=json.dumps({'pdb':prep['pdb'],'pockets':pockets,'mapping':prep['mapping'],'receipt':receipt},ensure_ascii=True).replace('<','\\u003c')
     library=pinned_member('viewer-3dmol-2.5.5.zip','3Dmol-min.js').decode().replace('</script','<\\/script')
     notice=html.escape(pinned_member('viewer-3dmol-2.5.5.zip','LICENSE').decode())
-    return '''<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>P2Rank pocket result</title><style>body{font:15px system-ui;background:#0b1020;color:#e2e8f0;margin:0}header,aside{padding:18px}main{display:grid;grid-template-columns:340px 1fr}#viewer{height:75vh;position:relative}button,select{padding:8px;margin:5px;background:#1e293b;color:white;border:1px solid #64748b;border-radius:6px}label{display:block;padding:5px}pre{white-space:pre-wrap}#error{color:#f87171}</style></head><body><header><h1>P2Rank candidate binding pockets</h1><p>Centers and surface points in Å. Model estimates, not experimentally confirmed sites.</p><button id="receipt">Download receipt</button><button id="reset">Reset camera</button><select id="limit"><option value="1">Top 1</option><option value="3" selected>Top 3</option><option value="10">All returned</option></select><p id="error"></p></header><main><aside id="pockets"></aside><div id="viewer"></div></main><details><summary>Attribution and licenses</summary><p>P2Rank: Krivák and Hoksza (2018). Structures from RCSB PDB / wwPDB, CC0. Visualization:3Dmol.js.</p><pre>'''+notice+'''</pre></details><script>'''+library+'''</script><script>const result='''+payload+''';const colors='''+json.dumps(PALETTE)+''';let viewer;window.verification={ready:false,selectedResidues:[],centers:[],surfacePoints:0};
+    return '''<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>P2Rank pocket result</title><style>body{font:15px system-ui;background:#0b1020;color:#e2e8f0;margin:0}header,aside{padding:18px}main{display:grid;grid-template-columns:340px 1fr}#viewer{height:75vh;position:relative}button,select{padding:8px;margin:5px;background:#1e293b;color:white;border:1px solid #64748b;border-radius:6px}label{display:block;padding:5px}pre{white-space:pre-wrap}#error{color:#f87171}</style></head><body><header><h1>P2Rank candidate binding pockets</h1><p>Centers and surface points in Å. Model estimates, not experimentally confirmed sites.</p><button id="receipt">Download receipt</button><button id="reset">Reset camera</button><select id="limit"><option value="1">Top 1</option><option value="3" selected>Top 3</option><option value="10">All returned</option></select><p id="error"></p></header><main><aside id="pockets"></aside><div id="viewer"></div></main><details><summary>Attribution and licenses</summary><p>P2Rank: Krivák and Hoksza (2018). Structures from RCSB PDB / wwPDB, CC0. Visualization: 3Dmol.js 2.5.5 (BSD-3-Clause).</p><pre>'''+notice+'''</pre></details><script>'''+library+'''</script><script>const result='''+payload+''';const colors='''+json.dumps(PALETTE)+''';let viewer;window.verification={ready:false,selectedResidues:[],centers:[],surfacePoints:0};
 function render(){viewer.removeAllShapes();viewer.removeAllLabels();viewer.setStyle({},{cartoon:{color:'#94a3b8'},line:{color:'#94a3b8',opacity:0.25}});const limit=Number(document.getElementById('limit').value);const box=document.getElementById('pockets');box.replaceChildren();window.verification.selectedResidues=[];window.verification.centers=[];window.verification.surfacePoints=0;for(const p of result.pockets.filter(p=>p.rank<=limit)){const c=colors[p.rank-1];const center={x:p.center_angstrom[0],y:p.center_angstrom[1],z:p.center_angstrom[2]};viewer.addSphere({center,radius:0.8,color:c});viewer.addLabel('Pocket '+p.rank,{position:center,backgroundColor:c,fontColor:'white'});window.verification.centers.push(p.center_angstrom);for(const s of p.surface_points){viewer.addSphere({center:{x:s.xyz_angstrom[0],y:s.xyz_angstrom[1],z:s.xyz_angstrom[2]},radius:0.18,color:c,opacity:0.65});window.verification.surfacePoints++;}const title=document.createElement('h3');title.style.color=c;title.textContent='Pocket '+p.rank+' — score '+p.upstream_score+(p.upstream_probability===null?'':' / probability '+p.upstream_probability);box.append(title);for(const r of p.residues){const label=document.createElement('label'),checkbox=document.createElement('input');checkbox.type='checkbox';checkbox.checked=true;const text=document.createTextNode(' '+r.author_chain+':'+r.author_residue_number+r.insertion_code+' '+r.residue_name+' (label '+(r.label_chain||'?')+':'+(r.label_seq_id===null?'?':r.label_seq_id)+')');label.append(checkbox,text);box.append(label);const selection={chain:r.internal_chain,resi:r.internal_residue};function apply(){viewer.setStyle(selection,checkbox.checked?{stick:{color:c,radius:0.17},cartoon:{color:c}}:{cartoon:{color:'#94a3b8'}});viewer.render();}checkbox.addEventListener('change',apply);apply();window.verification.selectedResidues.push({author_chain:r.author_chain,author_residue_number:r.author_residue_number,insertion_code:r.insertion_code,internal_chain:r.internal_chain,internal_residue:r.internal_residue,atomCount:viewer.getModel().selectedAtoms(selection).length});}}if(!result.pockets.length)box.textContent='No pockets predicted. This is a valid empty result.';viewer.render();}
 try{viewer=$3Dmol.createViewer(document.getElementById('viewer'),{backgroundColor:'#0b1020'});viewer.addModel(result.pdb,'pdb');render();viewer.zoomTo();viewer.render();window.verification.ready=true;}catch(e){document.getElementById('error').textContent='3D unavailable: '+e.message;}
 document.getElementById('limit').addEventListener('change',render);document.getElementById('reset').onclick=()=>{viewer.zoomTo();viewer.render();};document.getElementById('receipt').onclick=()=>{const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([JSON.stringify(result.receipt,null,2)],{type:'application/json'}));a.download='receipt.json';a.click();setTimeout(()=>URL.revokeObjectURL(a.href),1000);};</script></body></html>'''
 
 def predict(raw,format,chains,top_n,root=None):
     start=time.monotonic();root=Path(root or tempfile.mkdtemp(prefix='p2rank-',suffix='-result'));root.mkdir(parents=True,exist_ok=True);root.chmod(0o700)
-    if type(top_n)is not int or not 1<=top_n<=10:raise InputError('top_n','top_n must be integer1–10')
+    if type(top_n)is not int or not 1<=top_n<=10:raise InputError('top_n','top_n must be an integer from 1 to 10')
     prep=preprocess(raw,format,chains);pdb=root/'processed.pdb';pdb.write_text(prep['pdb'])
     # Runtime extraction and native scratch output stay outside retained results and are removed afterwards.
     work=Path(tempfile.mkdtemp(prefix='p2rank-work-'))
@@ -160,9 +160,13 @@ class PocketPredictor(BioModule):
             if len(paths)!=1:raise InputError('structure_input','Upload exactly one PDB or mmCIF structure')
             name,format=paths[0];p=Path(name)
             if not p.is_absolute():p=bundled_example(p)
-            if p.is_symlink()or not p.is_file()or p.stat().st_size>MAX_BYTES:raise InputError('structure_file','Upload must be a regular file<=2MiB')
-            if p.suffix.lower() not in (('.pdb',) if format=='pdb' else ('.cif','.mmcif')):
+            if p.is_symlink()or not p.is_file()or p.stat().st_size>MAX_BYTES:raise InputError('structure_file','Upload must be a regular file of at most 2 MiB')
+            # Platform-stored uploads may lose their name; an explicit foreign extension or compressed bytes is rejected.
+            suffix=p.suffix.lower()
+            if suffix and suffix not in (('.pdb','.ent') if format=='pdb' else ('.cif','.mmcif')):
                 raise InputError('unsupported_format','File extension differs from declared format')
+            if p.read_bytes()[:4] in (b'PK\x03\x04',) or p.read_bytes()[:2]==b'\x1f\x8b':
+                raise InputError('unsupported_format','Compressed or archived uploads are not supported')
             try:chains=json.loads(v.get('chains_json','[]'))
             except Exception as e:raise InputError('chain_selection','chains_json must be a JSON list')from e
             output=Path.cwd()/'outputs';output.mkdir(exist_ok=True)

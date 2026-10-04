@@ -55,7 +55,7 @@ def preprocess(raw,format,chains):
             if atoms:proteins.append((res,[x[1]for x in atoms.values()]))
         if not proteins:continue
         ci=len(model)
-        if ci>=len(CHAIN_IDS):raise InputError('chain_limit','Maximum62protein chains')
+        if ci>=len(CHAIN_IDS):raise InputError('chain_limit','Maximum 62 protein chains')
         internal=CHAIN_IDS[ci];new_chain=gemmi.Chain(internal)
         for n,(res,atoms) in enumerate(proteins,1):
             key=(chain.name,res.seqid.num,res.seqid.icode.strip(),res.subchain)
@@ -72,7 +72,7 @@ def preprocess(raw,format,chains):
             new_chain.add_residue(new)
         model.add_chain(new_chain)
     if count==0:raise InputError('no_protein','No usable protein heavy-atom coordinates in selected chains')
-    if count>MAX_ATOMS or len(mapping)>MAX_RESIDUES:raise InputError('structure_limit','Maximum10000protein heavy atoms and2000residues')
+    if count>MAX_ATOMS or len(mapping)>MAX_RESIDUES:raise InputError('structure_limit','Maximum 10000 protein heavy atoms and 2000 residues')
     out.add_model(model)
     pdb=out.make_pdb_string()
     return {'pdb':pdb,'mapping':mapping,'atom_mapping':atom_map,'protein_atoms':count,
