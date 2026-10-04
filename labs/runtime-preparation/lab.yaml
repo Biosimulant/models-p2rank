@@ -1,0 +1,46 @@
+schema_version: '2.0'
+package: p2rank-runtime-preparation
+version: 0.1.0
+title: P2Rank Runtime Preparation
+description: Private one-time pinned P2Rank 2.5.1 runtime asset acquisition; not pocket inference.
+license: MIT
+models:
+- alias: acquire
+  path: models/acquire
+wiring: []
+io:
+  inputs: []
+  outputs:
+  - name: runtime_0
+    maps_to: acquire.runtime_0
+    value_type: file
+    format: zip
+  - name: runtime_1
+    maps_to: acquire.runtime_1
+    value_type: file
+    format: zip
+  - name: receipt
+    maps_to: acquire.receipt
+runtime:
+  python_version: '3.12'
+  duration: 1
+  communication_step: 1
+  initial_inputs: {}
+hardware:
+  compute:
+    device: cpu
+    cpu_cores: 2
+    memory_mb: 4096
+    recommended_profile: pro
+intended_use:
+  statement: Private acquisition of the checksum-pinned P2Rank 2.5.1 binary distribution; no scientific result.
+caveats:
+- Infrastructure-only preparation; downloads the exact public GitHub release archive once. Pocket inference must use retained artifacts offline.
+prohibited_claims:
+- Protein, pocket or biological inference from asset preparation
+visualization:
+  schema_version: '1'
+  required:
+  - module: acquire
+    render: text
+    min_count: 1

@@ -1,0 +1,39 @@
+schema_version: '2.0'
+package: p2rank-runtime-acquire
+version: 0.1.0
+title: P2Rank Runtime Acquisition
+description: Private one-time checksum-pinned P2Rank 2.5.1 runtime chunk preparation.
+standard: other
+license: MIT
+biosim:
+  entrypoint: src.acquire:AcquireRuntime
+  execution_policy: once_before_run
+  communication_step: 1.0
+io:
+  inputs: []
+  outputs:
+  - name: runtime_0
+    signal_type: scalar
+    dtype: str
+    value_type: file
+    format: zip
+  - name: runtime_1
+    signal_type: scalar
+    dtype: str
+    value_type: file
+    format: zip
+  - name: receipt
+    signal_type: record
+    schema:
+      source_url: str
+      source_sha256: str
+      source_size_bytes: int
+      members_verified: int
+      chunks: json
+      all_chunks_match: bool
+    emitted_unit: '1'
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - biosimulant==0.0.34

@@ -1,0 +1,252 @@
+{
+  "scope": "Local composed CLI (macOS arm64) from dedicated staging source; no managed Run, hosted deployment or end-to-end platform staging evidence",
+  "python": "3.12.14 (main, Aug 25 2026, 13:50:33) [Clang 22.1.3 ]",
+  "cases": [
+    {
+      "case": "example-pdb-top3",
+      "status": "PASS",
+      "report_status": "ok",
+      "elapsed_seconds": 15.582829958060756,
+      "pockets": 3,
+      "scores": [
+        10.96,
+        9.26,
+        5.97
+      ],
+      "renders": [
+        "text",
+        "structure3d",
+        "table"
+      ],
+      "artifacts": [
+        {
+          "port": "processed_structure",
+          "size_bytes": 379809,
+          "sha256": "29d2da834d81993d17a0e516e246abd1ed0d4f2c06718c47700bbe52eb1d0c81"
+        },
+        {
+          "port": "raw_predictions",
+          "size_bytes": 2962,
+          "sha256": "323fea67d5037cf1a99c2759f7fa137f7c30786ea7679f588c008d28324a1db5"
+        },
+        {
+          "port": "raw_residues",
+          "size_bytes": 27341,
+          "sha256": "6d6d3effaf58aa1ac0dc2378e7295bc0e641063f2006244d0bd84e758a700f75"
+        },
+        {
+          "port": "mapped_residues",
+          "size_bytes": 23105,
+          "sha256": "85d2b5a321cd0340498c6464255725b03b8d2f2204792d4790afa5cff648b17a"
+        },
+        {
+          "port": "residue_map",
+          "size_bytes": 137738,
+          "sha256": "26fd738ec2d362a93ebcc1a29b06129a2d7f487479f95370d0324407ff394c7b"
+        },
+        {
+          "port": "report_file",
+          "size_bytes": 1436408,
+          "sha256": "5174a80c6de07f1cce179e9bb0bbde56dab3255ad2f6d27a88b0b5c8ef412c83"
+        },
+        {
+          "port": "receipt_file",
+          "size_bytes": 1670,
+          "sha256": "94c6af0cf58858c6930a913a0d78b5ed8a952f6e196f2876ac599b8362163b0d"
+        },
+        {
+          "port": "pocket_view",
+          "size_bytes": 1085023,
+          "sha256": "8c2e67773db815a2e13e028c45d802391dd76e9b0c60761d0fa44966bfdf7a61"
+        }
+      ],
+      "error_code": null
+    },
+    {
+      "case": "upload-mmcif-top1",
+      "status": "PASS",
+      "report_status": "ok",
+      "elapsed_seconds": 15.220625458052382,
+      "pockets": 1,
+      "scores": [
+        10.96
+      ],
+      "renders": [
+        "text",
+        "structure3d",
+        "table"
+      ],
+      "artifacts": [
+        {
+          "port": "processed_structure",
+          "size_bytes": 379809,
+          "sha256": "29d2da834d81993d17a0e516e246abd1ed0d4f2c06718c47700bbe52eb1d0c81"
+        },
+        {
+          "port": "raw_predictions",
+          "size_bytes": 2962,
+          "sha256": "323fea67d5037cf1a99c2759f7fa137f7c30786ea7679f588c008d28324a1db5"
+        },
+        {
+          "port": "raw_residues",
+          "size_bytes": 27341,
+          "sha256": "6d6d3effaf58aa1ac0dc2378e7295bc0e641063f2006244d0bd84e758a700f75"
+        },
+        {
+          "port": "mapped_residues",
+          "size_bytes": 23495,
+          "sha256": "80a1ba70409dfaf969bb474aff538074750a275c90773c238bff3cc405e031e8"
+        },
+        {
+          "port": "residue_map",
+          "size_bytes": 135704,
+          "sha256": "b422295d54db175a978e50750cdb5380ea5cbbea56b88786a0402daddb04a09e"
+        },
+        {
+          "port": "report_file",
+          "size_bytes": 1397969,
+          "sha256": "458548a72eb0c6460e2637ad284bf655e9605f305943eb1c8484404f6533651f"
+        },
+        {
+          "port": "receipt_file",
+          "size_bytes": 1670,
+          "sha256": "427e62419d552f600d129c9eb5db28ba93bd9dd545fd8a6b34c556a022dd530c"
+        },
+        {
+          "port": "pocket_view",
+          "size_bytes": 1063732,
+          "sha256": "6134290d919f2c4c0a5fdd7b3c7913fa494db128e18e7ce3ee96b0122fbd8958"
+        }
+      ],
+      "error_code": null
+    },
+    {
+      "case": "chain-selection-insertion-codes",
+      "status": "PASS",
+      "report_status": "ok",
+      "elapsed_seconds": 12.673865457996726,
+      "pockets": 1,
+      "scores": [
+        17.47
+      ],
+      "renders": [
+        "text",
+        "structure3d",
+        "table"
+      ],
+      "artifacts": [
+        {
+          "port": "processed_structure",
+          "size_bytes": 73143,
+          "sha256": "5f74994163ea2a6c575da30591d844e00fec0ef915e732dd1e5027c404b000c8"
+        },
+        {
+          "port": "raw_predictions",
+          "size_bytes": 425,
+          "sha256": "25745a0a5530c4a0cc9dc4b34ec932d640f4cd27af450a470ed7ad14cf666fc8"
+        },
+        {
+          "port": "raw_residues",
+          "size_bytes": 5516,
+          "sha256": "9840effaa88a9c49b7a6d4d3683fb1b5e076495f589dee05fc71a4b1725eaa7d"
+        },
+        {
+          "port": "mapped_residues",
+          "size_bytes": 6067,
+          "sha256": "37445484ecb951921f5a82aa2daa644ea4d1f31ae18655c71dd0ea735955168b"
+        },
+        {
+          "port": "residue_map",
+          "size_bytes": 28319,
+          "sha256": "7fd81f01d4499c961c82aa8af4c520363fcde33e96b53e31aae76b6019f15a25"
+        },
+        {
+          "port": "report_file",
+          "size_bytes": 381760,
+          "sha256": "bfbcb295c96c97f7c340e8bfc8c4ae177552334cc387b01c028f2301f37e37c1"
+        },
+        {
+          "port": "receipt_file",
+          "size_bytes": 1666,
+          "sha256": "3fe9e8d0874d8b68e84d9c237b45760a4cf8fb7864cb25f2c796ee4c8a5c1af9"
+        },
+        {
+          "port": "pocket_view",
+          "size_bytes": 654900,
+          "sha256": "36d0c583068a6588493b11eb9e24196239cabe0fa75d8c0a81e9c5e4dd212bc0"
+        }
+      ],
+      "error_code": null
+    },
+    {
+      "case": "no-pockets",
+      "status": "PASS",
+      "report_status": "no_pockets",
+      "elapsed_seconds": 12.462031833943911,
+      "pockets": 0,
+      "scores": [],
+      "renders": [
+        "text",
+        "structure3d"
+      ],
+      "artifacts": [
+        {
+          "port": "processed_structure",
+          "size_bytes": 26649,
+          "sha256": "a883deb21ed9a097437df30db0fbc789e5ce823477559cdbf3113b28c5410e9d"
+        },
+        {
+          "port": "raw_predictions",
+          "size_bytes": 127,
+          "sha256": "59aa76673296f5aaf058cd70b7c02ca7c6a20bb834dfee95c78ab27990811e60"
+        },
+        {
+          "port": "raw_residues",
+          "size_bytes": 2141,
+          "sha256": "e29a52ded9c5c448b779e10ada41c348ce82f6dcfe5275436fe5ad608acf77b0"
+        },
+        {
+          "port": "mapped_residues",
+          "size_bytes": 1833,
+          "sha256": "f7ac70734a54b0a32bed61f27c0b9f5f234e5045000d5e37e0d326a7c3cea300"
+        },
+        {
+          "port": "residue_map",
+          "size_bytes": 10187,
+          "sha256": "83d85e66d5d8bd71d2c0003337e311b8430764197fae8802121b634a61ac7f10"
+        },
+        {
+          "port": "report_file",
+          "size_bytes": 154001,
+          "sha256": "f27f1cef7ecb72cc9a0731f71ecae42d7b22135d5ea5f1b1d161b80c1a9e15ab"
+        },
+        {
+          "port": "receipt_file",
+          "size_bytes": 1657,
+          "sha256": "119c6dafd226949aa64e24c52689758d5eade25a14511a22e930fe2bc8526749"
+        },
+        {
+          "port": "pocket_view",
+          "size_bytes": 583554,
+          "sha256": "92cb66e5e83127cf11485b359e0da71d4c344af15da311e19f8613243b3644e8"
+        }
+      ],
+      "error_code": null
+    },
+    {
+      "case": "invalid-two-files",
+      "status": "PASS",
+      "report_status": "invalid_input",
+      "elapsed_seconds": 5.370064666029066,
+      "pockets": 0,
+      "scores": [],
+      "renders": [
+        "text"
+      ],
+      "artifacts": [],
+      "error_code": "structure_input"
+    }
+  ],
+  "output_directory_isolation": "PASS",
+  "peak_child_rss_bytes_macos": 462340096
+}

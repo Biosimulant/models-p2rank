@@ -1,0 +1,5 @@
+biosimulant==0.0.34
+gemmi==0.7.3
+jdk4py==21.0.8.1
+pytest==8.4.2
+PyYAML==6.0.3

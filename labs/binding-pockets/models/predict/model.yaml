@@ -1,0 +1,106 @@
+schema_version: '2.0'
+package: p2rank-pocket-predictor
+version: 0.1.0
+title: P2Rank Pocket Predictor
+description: Offline finite2.5.1coordinate-to-pocket adapter with reversible residue
+  mapping.
+standard: other
+license: MIT
+biosim:
+  entrypoint: src.predictor:PocketPredictor
+  execution_policy: once_before_run
+  communication_step: 1.0
+io:
+  inputs:
+  - name: structure_file
+    signal_type: scalar
+    dtype: str
+    value_type: file
+    format: pdb
+    required: false
+    description: Upload protein PDB (<=2MiB); provide exactly one PDB or mmCIF file.
+  - name: mmcif_file
+    signal_type: scalar
+    dtype: str
+    value_type: file
+    format: cif
+    required: false
+    description: Upload text mmCIF (<=2MiB); preserve author/label chain and residue
+      mappings.
+  - name: chains_json
+    signal_type: scalar
+    dtype: str
+    value_type: string
+    default: '[]'
+    required: false
+    max_length: 1024
+    description: Selected author chain IDs as JSON list; [] selects all protein chains
+      in first model.
+  - name: top_n
+    signal_type: scalar
+    dtype: int64
+    value_type: integer
+    default: 3
+    required: false
+    description: "Top1\u201310ranked pockets."
+  outputs:
+  - name: report
+    signal_type: record
+    schema:
+      status: str
+      pockets: json
+      residues: json
+      surface_points: json
+      receipt: json
+    emitted_unit: '1'
+  - name: pocket_count
+    signal_type: scalar
+    dtype: int64
+    emitted_unit: count
+  - name: processed_structure
+    signal_type: scalar
+    dtype: str
+    value_type: file
+    format: pdb
+  - name: raw_predictions
+    signal_type: scalar
+    dtype: str
+    value_type: file
+    format: csv
+  - name: raw_residues
+    signal_type: scalar
+    dtype: str
+    value_type: file
+    format: csv
+  - name: mapped_residues
+    signal_type: scalar
+    dtype: str
+    value_type: file
+    format: csv
+  - name: residue_map
+    signal_type: scalar
+    dtype: str
+    value_type: file
+    format: json
+  - name: report_file
+    signal_type: scalar
+    dtype: str
+    value_type: file
+    format: json
+  - name: receipt_file
+    signal_type: scalar
+    dtype: str
+    value_type: file
+    format: json
+  - name: pocket_view
+    signal_type: scalar
+    dtype: str
+    value_type: file
+    format: html
+runtime:
+  python_version: '3.12'
+  dependencies:
+    packages:
+    - biosimulant==0.0.34
+    - gemmi==0.7.3
+    - jdk4py==21.0.8.1

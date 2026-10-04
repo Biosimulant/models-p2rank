@@ -1,0 +1,132 @@
+{
+  "A1": {
+    "1CRN": {
+      "comparisons": [
+        "adapter vs standalone on identical processed PDB: exact rows",
+        "adapter mapped author IDs vs standalone on original mmCIF: ordering, residues, scores, centers"
+      ],
+      "max_center_delta_angstrom_vs_original": 0.0,
+      "pockets": 0,
+      "probabilities": [],
+      "ranks": [],
+      "residue_rows_processed_parity": 46,
+      "scores": []
+    },
+    "1STP": {
+      "comparisons": [
+        "adapter vs standalone on identical processed PDB: exact rows",
+        "adapter mapped author IDs vs standalone on original mmCIF: ordering, residues, scores, centers"
+      ],
+      "max_center_delta_angstrom_vs_original": 0.0,
+      "pockets": 1,
+      "probabilities": [
+        "0.803"
+      ],
+      "ranks": [
+        1
+      ],
+      "residue_rows_processed_parity": 121,
+      "scores": [
+        "17.47"
+      ]
+    },
+    "7L13": {
+      "comparisons": [
+        "adapter vs standalone on identical processed PDB: exact rows",
+        "adapter mapped author IDs vs standalone on original mmCIF: ordering, residues, scores, centers"
+      ],
+      "max_center_delta_angstrom_vs_original": 0.0,
+      "pockets": 8,
+      "probabilities": [
+        "0.588",
+        "0.497",
+        "0.293",
+        "0.233",
+        "0.135",
+        "0.068",
+        "0.031",
+        "0.022"
+      ],
+      "ranks": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "residue_rows_processed_parity": 606,
+      "scores": [
+        "10.96",
+        "9.26",
+        "5.97",
+        "5.08",
+        "3.61",
+        "2.48",
+        "1.74",
+        "1.51"
+      ]
+    }
+  },
+  "A2": {
+    "chain_selection_AUTH_B_pockets": 1,
+    "insertion_code_residues_in_pockets": [
+      "AUTH_A:30A",
+      "AUTH_B:30A"
+    ],
+    "mapped_residues": 242,
+    "pocket_author_chains": [
+      "AUTH_A",
+      "AUTH_B"
+    ],
+    "pockets": 2
+  },
+  "A3": {
+    "definition": "minimum distance from predicted pocket center to any reference ligand heavy atom <= 4.0 Angstrom",
+    "distances_angstrom_by_rank": [
+      20.71359444447052,
+      1.3657698305351462,
+      43.3291300046516
+    ],
+    "nearest_distance_angstrom": 1.3657698305351462,
+    "nearest_rank": 2,
+    "reference_ligand": "XF7 A/401",
+    "scope": "Single-structure demonstration; not an accuracy estimate",
+    "structure": "7L13 (released 2021-03-03; P2Rank default model trained on CHEN11)",
+    "top1_recovered": false,
+    "top3_recovered": true
+  },
+  "A4": {
+    "1CRN_no_pockets": {
+      "files": [
+        "mapped_residues",
+        "pocket_view",
+        "processed_structure",
+        "raw_predictions",
+        "raw_residues",
+        "receipt_file",
+        "report_file",
+        "residue_map"
+      ],
+      "status": "no_pockets"
+    },
+    "module_outcomes": [
+      "structure_input",
+      "unsupported_format",
+      "timeout",
+      "execution_failed"
+    ]
+  },
+  "A5": {
+    "top1_rank_scores": [
+      10.96
+    ],
+    "top3_rank_scores": [
+      10.96,
+      9.26,
+      5.97
+    ]
+  }
+}

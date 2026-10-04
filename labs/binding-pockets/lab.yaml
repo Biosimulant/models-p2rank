@@ -1,0 +1,161 @@
+schema_version: '2.0'
+package: p2rank-binding-pockets
+version: 0.1.0
+title: P2Rank Binding-Pocket Prediction
+description: "Upload a protein PDB or mmCIF and inspect ranked candidate pockets,\
+  \ original residue assignments, \xC5 centers and surface points. Download a reopenable\
+  \ offline3D pocket result. Research estimates, not confirmed binding sites."
+license: MIT
+models:
+- alias: predict
+  path: models/predict
+wiring: []
+io:
+  inputs:
+  - name: structure_file
+    signal_type: scalar
+    dtype: str
+    value_type: file
+    format: pdb
+    required: false
+    description: Upload protein PDB (<=2MiB); provide exactly one PDB or mmCIF file.
+    maps_to: predict.structure_file
+  - name: mmcif_file
+    signal_type: scalar
+    dtype: str
+    value_type: file
+    format: cif
+    required: false
+    description: Upload text mmCIF (<=2MiB); preserve author/label chain and residue
+      mappings.
+    maps_to: predict.mmcif_file
+  - name: chains_json
+    signal_type: scalar
+    dtype: str
+    value_type: string
+    default: '[]'
+    required: false
+    max_length: 1024
+    description: Selected author chain IDs as JSON list; [] selects all protein chains
+      in first model.
+    maps_to: predict.chains_json
+  - name: top_n
+    signal_type: scalar
+    dtype: int64
+    value_type: integer
+    default: 3
+    required: false
+    description: "Top1\u201310ranked pockets."
+    maps_to: predict.top_n
+  outputs:
+  - name: report
+    signal_type: record
+    schema:
+      status: str
+      pockets: json
+      residues: json
+      surface_points: json
+      receipt: json
+    emitted_unit: '1'
+    maps_to: predict.report
+  - name: pocket_count
+    signal_type: scalar
+    dtype: int64
+    emitted_unit: count
+    maps_to: predict.pocket_count
+  - name: processed_structure
+    signal_type: scalar
+    dtype: str
+    value_type: file
+    format: pdb
+    maps_to: predict.processed_structure
+  - name: raw_predictions
+    signal_type: scalar
+    dtype: str
+    value_type: file
+    format: csv
+    maps_to: predict.raw_predictions
+  - name: raw_residues
+    signal_type: scalar
+    dtype: str
+    value_type: file
+    format: csv
+    maps_to: predict.raw_residues
+  - name: mapped_residues
+    signal_type: scalar
+    dtype: str
+    value_type: file
+    format: csv
+    maps_to: predict.mapped_residues
+  - name: residue_map
+    signal_type: scalar
+    dtype: str
+    value_type: file
+    format: json
+    maps_to: predict.residue_map
+  - name: report_file
+    signal_type: scalar
+    dtype: str
+    value_type: file
+    format: json
+    maps_to: predict.report_file
+  - name: receipt_file
+    signal_type: scalar
+    dtype: str
+    value_type: file
+    format: json
+    maps_to: predict.receipt_file
+  - name: pocket_view
+    signal_type: scalar
+    dtype: str
+    value_type: file
+    format: html
+    maps_to: predict.pocket_view
+runtime:
+  python_version: '3.12'
+  duration: 1.0
+  communication_step: 1.0
+  initial_inputs:
+    predict.structure_file: fixtures/7L13-protein.pdb
+    predict.chains_json: '[]'
+    predict.top_n: 3
+  dependencies:
+    packages:
+    - biosimulant==0.0.34
+    - gemmi==0.7.3
+    - jdk4py==21.0.8.1
+hardware:
+  compute:
+    device: cpu
+    cpu_cores: 2
+    memory_mb: 4096
+    recommended_profile: pro
+intended_use:
+  statement: Research candidate binding-pocket localization from small protein coordinate
+    structures; no experimental binding or clinical claim.
+caveats:
+- Default pretrainedP2Rank2.5.1; B-factors contribute to model features.
+- Protein-only first model and occupancy-resolved alternate coordinates; waters/ligands
+  removed.
+- Original author/label IDs and insertion codes preserved in downloadable map.
+- Scores/probabilities are upstream model estimates.
+- "Three-structure parity and one held-out4\xC5 demonstration do not establish broad\
+  \ accuracy."
+- Native3Dpreview shows protein; downloadable offlinepocket-view.html contains computed
+  colored pocket centers, pointcloud surface and residue highlights.
+- Runtime includes upstreamGPL/LGPL dependencies; consult full notices/source obligations
+  before redistribution.
+prohibited_claims:
+- Experimentally confirmed binding site
+- Binding affinity
+- Clinical utility
+- Broad biological validation
+visualization:
+  schema_version: '1'
+  required:
+  - module: predict
+    render: structure3d
+    min_count: 1
+  - module: predict
+    render: text
+    min_count: 1
