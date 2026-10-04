@@ -2,7 +2,7 @@ schema_version: '2.0'
 package: p2rank-pocket-predictor
 version: 0.1.0
 title: P2Rank Pocket Predictor
-description: Offline finite2.5.1coordinate-to-pocket adapter with reversible residue
+description: Finite offline adapter around pinned P2Rank 2.5.1 with reversible residue
   mapping.
 standard: other
 license: MIT
@@ -42,7 +42,7 @@ io:
     value_type: integer
     default: 3
     required: false
-    description: "Top1\u201310ranked pockets."
+    description: "Number of top-ranked pockets to return (1\u201310)."
   outputs:
   - name: report
     signal_type: record

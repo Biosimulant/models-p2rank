@@ -1,9 +1,9 @@
 schema_version: '2.0'
 package: p2rank-runtime-acquire
-version: 0.2.0
+version: 0.3.0
 title: P2Rank Runtime Acquisition
-description: Private one-time checksum-pinned P2Rank 2.5.1 runtime, 3Dmol.js and RCSB
-  fixture preparation.
+description: Private one-time preparation of the binding-pocket Lab bundles from checksum-pinned
+  public sources.
 standard: other
 license: MIT
 biosim:
@@ -23,42 +23,38 @@ io:
     dtype: str
     value_type: file
     format: zip
+  - name: viewer
+    signal_type: scalar
+    dtype: str
+    value_type: file
+    format: zip
+  - name: reference_structures
+    signal_type: scalar
+    dtype: str
+    value_type: file
+    format: zip
+  - name: license_records
+    signal_type: scalar
+    dtype: str
+    value_type: file
+    format: zip
+  - name: corresponding_sources
+    signal_type: scalar
+    dtype: str
+    value_type: file
+    format: zip
   - name: receipt
     signal_type: record
     schema:
       source_url: str
       source_sha256: str
       source_size_bytes: int
-      members_verified: int
-      chunks: json
-      all_chunks_match: bool
-      assets: json
+      runtime_members: int
+      excluded_members: json
+      repository_raw_base: str
+      bundles: json
+      all_match: bool
     emitted_unit: '1'
-  - name: viewer_js
-    signal_type: scalar
-    dtype: str
-    value_type: file
-    format: js
-  - name: viewer_license
-    signal_type: scalar
-    dtype: str
-    value_type: file
-    format: txt
-  - name: structure_1crn
-    signal_type: scalar
-    dtype: str
-    value_type: file
-    format: cif
-  - name: structure_1stp
-    signal_type: scalar
-    dtype: str
-    value_type: file
-    format: cif
-  - name: structure_7l13
-    signal_type: scalar
-    dtype: str
-    value_type: file
-    format: cif
 runtime:
   python_version: '3.12'
   dependencies:

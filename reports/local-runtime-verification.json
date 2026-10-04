@@ -6,7 +6,7 @@
       "case": "example-pdb-top3",
       "status": "PASS",
       "report_status": "ok",
-      "elapsed_seconds": 15.582829958060756,
+      "elapsed_seconds": 14.597886792034842,
       "pockets": 3,
       "scores": [
         10.96,
@@ -46,18 +46,18 @@
         },
         {
           "port": "report_file",
-          "size_bytes": 1436408,
-          "sha256": "5174a80c6de07f1cce179e9bb0bbde56dab3255ad2f6d27a88b0b5c8ef412c83"
+          "size_bytes": 1436409,
+          "sha256": "0811ebfc98049df1a2b4b40145407f5bd541b9736f09191d187919696773d9e0"
         },
         {
           "port": "receipt_file",
-          "size_bytes": 1670,
-          "sha256": "94c6af0cf58858c6930a913a0d78b5ed8a952f6e196f2876ac599b8362163b0d"
+          "size_bytes": 1671,
+          "sha256": "609b5aea970802dce5b62ceab21c688c10fb5faed92b7282c9d02c6247c737a9"
         },
         {
           "port": "pocket_view",
-          "size_bytes": 1085023,
-          "sha256": "8c2e67773db815a2e13e028c45d802391dd76e9b0c60761d0fa44966bfdf7a61"
+          "size_bytes": 1085024,
+          "sha256": "4e45c2d37f77427340509f77304f718e5b7710beb60a10ee92d5e5bb42fe48f7"
         }
       ],
       "error_code": null
@@ -66,7 +66,7 @@
       "case": "upload-mmcif-top1",
       "status": "PASS",
       "report_status": "ok",
-      "elapsed_seconds": 15.220625458052382,
+      "elapsed_seconds": 15.9841087089153,
       "pockets": 1,
       "scores": [
         10.96
@@ -105,17 +105,17 @@
         {
           "port": "report_file",
           "size_bytes": 1397969,
-          "sha256": "458548a72eb0c6460e2637ad284bf655e9605f305943eb1c8484404f6533651f"
+          "sha256": "ddd1dd63148dbcbc5c562c7334819170c452c3dc8de020063086cbbb0074d485"
         },
         {
           "port": "receipt_file",
           "size_bytes": 1670,
-          "sha256": "427e62419d552f600d129c9eb5db28ba93bd9dd545fd8a6b34c556a022dd530c"
+          "sha256": "c4fc7993afd78e6c5c55f05bc8e4c19f39ddac32953d0c4f82b32c3c7d98f4fd"
         },
         {
           "port": "pocket_view",
           "size_bytes": 1063732,
-          "sha256": "6134290d919f2c4c0a5fdd7b3c7913fa494db128e18e7ce3ee96b0122fbd8958"
+          "sha256": "f84414bd0a3e972a3d61e14ff85ab01eaa86be6b1888a464d4ac5f5188af582d"
         }
       ],
       "error_code": null
@@ -124,7 +124,7 @@
       "case": "chain-selection-insertion-codes",
       "status": "PASS",
       "report_status": "ok",
-      "elapsed_seconds": 12.673865457996726,
+      "elapsed_seconds": 9.801351874950342,
       "pockets": 1,
       "scores": [
         17.47
@@ -162,18 +162,18 @@
         },
         {
           "port": "report_file",
-          "size_bytes": 381760,
-          "sha256": "bfbcb295c96c97f7c340e8bfc8c4ae177552334cc387b01c028f2301f37e37c1"
+          "size_bytes": 381761,
+          "sha256": "ec36b21a5b3c847360ec79b4f7176070a3e0034960f4d1d28374db9ed3bc8744"
         },
         {
           "port": "receipt_file",
-          "size_bytes": 1666,
-          "sha256": "3fe9e8d0874d8b68e84d9c237b45760a4cf8fb7864cb25f2c796ee4c8a5c1af9"
+          "size_bytes": 1667,
+          "sha256": "96129f29679e26d5071145d16402a5c16071fb9c010ed33f8e2e3e221069c17f"
         },
         {
           "port": "pocket_view",
-          "size_bytes": 654900,
-          "sha256": "36d0c583068a6588493b11eb9e24196239cabe0fa75d8c0a81e9c5e4dd212bc0"
+          "size_bytes": 654901,
+          "sha256": "7adf9bdd28010751fda11ae310c134761fc734d3ebd31ded8755dbf9963674e5"
         }
       ],
       "error_code": null
@@ -182,7 +182,7 @@
       "case": "no-pockets",
       "status": "PASS",
       "report_status": "no_pockets",
-      "elapsed_seconds": 12.462031833943911,
+      "elapsed_seconds": 8.970056582940742,
       "pockets": 0,
       "scores": [],
       "renders": [
@@ -217,18 +217,18 @@
         },
         {
           "port": "report_file",
-          "size_bytes": 154001,
-          "sha256": "f27f1cef7ecb72cc9a0731f71ecae42d7b22135d5ea5f1b1d161b80c1a9e15ab"
+          "size_bytes": 154003,
+          "sha256": "f0ed1b0e794ced7b1aa12a0a4167d81846148c5c820c3e7a2d72f1db518d3c57"
         },
         {
           "port": "receipt_file",
-          "size_bytes": 1657,
-          "sha256": "119c6dafd226949aa64e24c52689758d5eade25a14511a22e930fe2bc8526749"
+          "size_bytes": 1659,
+          "sha256": "b04b5b4300e5766642cb1527bd2be44add8474014aa3aefacbe348515276791a"
         },
         {
           "port": "pocket_view",
-          "size_bytes": 583554,
-          "sha256": "92cb66e5e83127cf11485b359e0da71d4c344af15da311e19f8613243b3644e8"
+          "size_bytes": 583556,
+          "sha256": "685cab443e8dd2a9481da656ca8d8056f070c339f7040687788bda015156162a"
         }
       ],
       "error_code": null
@@ -237,7 +237,7 @@
       "case": "invalid-two-files",
       "status": "PASS",
       "report_status": "invalid_input",
-      "elapsed_seconds": 5.370064666029066,
+      "elapsed_seconds": 5.942538499948569,
       "pockets": 0,
       "scores": [],
       "renders": [
@@ -248,5 +248,5 @@
     }
   ],
   "output_directory_isolation": "PASS",
-  "peak_child_rss_bytes_macos": 462340096
+  "peak_child_rss_bytes_macos": 530759680
 }

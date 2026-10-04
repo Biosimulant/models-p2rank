@@ -2,9 +2,10 @@ schema_version: '2.0'
 package: p2rank-binding-pockets
 version: 0.1.0
 title: P2Rank Binding-Pocket Prediction
-description: "Upload a protein PDB or mmCIF and inspect ranked candidate pockets,\
-  \ original residue assignments, \xC5 centers and surface points. Download a reopenable\
-  \ offline3D pocket result. Research estimates, not confirmed binding sites."
+description: "Upload a protein structure (PDB or mmCIF) and get ranked candidate ligand-binding\
+  \ pockets from P2Rank 2.5.1: scores, centers and surface points in \xC5, residue\
+  \ assignments with original chain and residue IDs, and a downloadable interactive\
+  \ 3D pocket view. Model estimates, not experimentally confirmed binding sites."
 license: MIT
 models:
 - alias: predict
@@ -45,7 +46,7 @@ io:
     value_type: integer
     default: 3
     required: false
-    description: "Top1\u201310ranked pockets."
+    description: "Number of top-ranked pockets to return (1\u201310)."
     maps_to: predict.top_n
   outputs:
   - name: report
@@ -134,17 +135,21 @@ intended_use:
   statement: Research candidate binding-pocket localization from small protein coordinate
     structures; no experimental binding or clinical claim.
 caveats:
-- Default pretrainedP2Rank2.5.1; B-factors contribute to model features.
-- Protein-only first model and occupancy-resolved alternate coordinates; waters/ligands
-  removed.
-- Original author/label IDs and insertion codes preserved in downloadable map.
-- Scores/probabilities are upstream model estimates.
-- "Three-structure parity and one held-out4\xC5 demonstration do not establish broad\
-  \ accuracy."
-- Native3Dpreview shows protein; downloadable offlinepocket-view.html contains computed
-  colored pocket centers, pointcloud surface and residue highlights.
-- Runtime includes upstreamGPL/LGPL dependencies; consult full notices/source obligations
-  before redistribution.
+- Default pretrained P2Rank 2.5.1 model (trained on CHEN11); B-factors contribute
+  to its features, so predicted or non-X-ray structures need extra care.
+- Uses protein heavy atoms from the first model only; alternate locations resolved
+  by highest occupancy; waters, ligands and other non-amino-acid residues removed.
+- Original author and label chain/residue IDs, including insertion codes, are preserved
+  in the downloadable residue map and labels.
+- Scores and probabilities are upstream model estimates, not binding evidence.
+- "Exact parity on three reference structures and one held-out 4 \xC5 demonstration\
+  \ (7L13) do not establish broad accuracy."
+- The native 3D panel previews the processed protein; the downloadable pocket-view.html
+  shows colored pocket centers, surface points and residue highlights offline.
+- The runtime bundles unmodified GPL/LGPL Java components (e.g. Weka, FastRandomForest,
+  CDK, BioJava); notices are in assets/license-records.zip and exact corresponding
+  source in assets/corresponding-sources.zip. vecmath-1.3.1 and openchart-1.4.2 are
+  omitted from the upstream distribution (outputs verified identical).
 prohibited_claims:
 - Experimentally confirmed binding site
 - Binding affinity

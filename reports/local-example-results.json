@@ -62,7 +62,7 @@
         "system": "Darwin"
       }
     },
-    "lab": "/private/var/folders/6v/87hq7q3x27s40blg5h4r2pz00000gp/T/biosim-run-inputs-do0zjmbh/lab",
+    "lab": "/private/var/folders/6v/87hq7q3x27s40blg5h4r2pz00000gp/T/biosim-run-inputs-wvg86_1k/lab",
     "local_supported": true,
     "requirements": {
       "accelerators": [],
@@ -117,7 +117,7 @@
           "value_type": "file"
         },
         "type": "scalar",
-        "value": "/Users/demi/Documents/projects-local/bsim/models/models-p2rank/outputs/p2rank-pockets-m3uumnng/mapped_residues.csv"
+        "value": "/Users/demi/Documents/projects-local/bsim/models/models-p2rank/outputs/p2rank-pockets-5kbirf6p/mapped_residues.csv"
       },
       "pocket_count": {
         "emitted_at": 0.0,
@@ -179,7 +179,7 @@
           "value_type": "file"
         },
         "type": "scalar",
-        "value": "/Users/demi/Documents/projects-local/bsim/models/models-p2rank/outputs/p2rank-pockets-m3uumnng/pocket-view.html"
+        "value": "/Users/demi/Documents/projects-local/bsim/models/models-p2rank/outputs/p2rank-pockets-5kbirf6p/pocket-view.html"
       },
       "processed_structure": {
         "emitted_at": 0.0,
@@ -210,7 +210,7 @@
           "value_type": "file"
         },
         "type": "scalar",
-        "value": "/Users/demi/Documents/projects-local/bsim/models/models-p2rank/outputs/p2rank-pockets-m3uumnng/processed.pdb"
+        "value": "/Users/demi/Documents/projects-local/bsim/models/models-p2rank/outputs/p2rank-pockets-5kbirf6p/processed.pdb"
       },
       "raw_predictions": {
         "emitted_at": 0.0,
@@ -241,7 +241,7 @@
           "value_type": "file"
         },
         "type": "scalar",
-        "value": "/Users/demi/Documents/projects-local/bsim/models/models-p2rank/outputs/p2rank-pockets-m3uumnng/predictions.csv"
+        "value": "/Users/demi/Documents/projects-local/bsim/models/models-p2rank/outputs/p2rank-pockets-5kbirf6p/predictions.csv"
       },
       "raw_residues": {
         "emitted_at": 0.0,
@@ -272,7 +272,7 @@
           "value_type": "file"
         },
         "type": "scalar",
-        "value": "/Users/demi/Documents/projects-local/bsim/models/models-p2rank/outputs/p2rank-pockets-m3uumnng/residues.csv"
+        "value": "/Users/demi/Documents/projects-local/bsim/models/models-p2rank/outputs/p2rank-pockets-5kbirf6p/residues.csv"
       },
       "receipt_file": {
         "emitted_at": 0.0,
@@ -303,7 +303,7 @@
           "value_type": "file"
         },
         "type": "scalar",
-        "value": "/Users/demi/Documents/projects-local/bsim/models/models-p2rank/outputs/p2rank-pockets-m3uumnng/receipt_file.json"
+        "value": "/Users/demi/Documents/projects-local/bsim/models/models-p2rank/outputs/p2rank-pockets-5kbirf6p/receipt_file.json"
       },
       "report": {
         "emitted_at": 0.0,
@@ -3713,7 +3713,7 @@
             "center_unit": "angstrom",
             "coordinate_models_in_input": 1,
             "distribution_sha256": "d243f2d9036ac053fefb9407b5fe1c85f4fe077c519fd975ac585e995feab274",
-            "elapsed_seconds": 9.212261082953773,
+            "elapsed_seconds": 6.7383491669315845,
             "gemmi_version": "0.7.3",
             "input_format": "pdb",
             "input_sha256": "29d2da834d81993d17a0e516e246abd1ed0d4f2c06718c47700bbe52eb1d0c81",
@@ -83147,7 +83147,7 @@
           "value_type": "file"
         },
         "type": "scalar",
-        "value": "/Users/demi/Documents/projects-local/bsim/models/models-p2rank/outputs/p2rank-pockets-m3uumnng/report_file.json"
+        "value": "/Users/demi/Documents/projects-local/bsim/models/models-p2rank/outputs/p2rank-pockets-5kbirf6p/report_file.json"
       },
       "residue_map": {
         "emitted_at": 0.0,
@@ -83178,7 +83178,7 @@
           "value_type": "file"
         },
         "type": "scalar",
-        "value": "/Users/demi/Documents/projects-local/bsim/models/models-p2rank/outputs/p2rank-pockets-m3uumnng/residue_map.json"
+        "value": "/Users/demi/Documents/projects-local/bsim/models/models-p2rank/outputs/p2rank-pockets-5kbirf6p/residue_map.json"
       }
     }
   },
@@ -83201,7 +83201,7 @@
             "format": "pdb",
             "source": {
               "kind": "artifact",
-              "path": "/Users/demi/Documents/projects-local/bsim/models/models-p2rank/outputs/p2rank-pockets-m3uumnng/processed.pdb"
+              "path": "/Users/demi/Documents/projects-local/bsim/models/models-p2rank/outputs/p2rank-pockets-5kbirf6p/processed.pdb"
             }
           },
           "render": "structure3d"
