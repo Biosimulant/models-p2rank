@@ -96,6 +96,13 @@ def test_a1_parity_with_standalone_distribution(name, adapter_runs, tmp_path, ev
     }
 
 
+def view_payload(html):
+    """Decode the gzip+base64 data embedded in pocket-view.html."""
+    import base64, gzip, re
+    packed = json.loads(re.search(r"const packed=(\"[^\"]*\");", html).group(1))
+    return json.loads(gzip.decompress(base64.b64decode(packed)))
+
+
 def atoms_by_residue(structure, chain_name, key):
     for chain in structure[0]:
         if chain.name != chain_name:
@@ -138,8 +145,9 @@ def test_a2_insertion_codes_gaps_and_duplicate_author_numbers(tmp_path, evidence
         (browser / 'a2/pocket-view.html').write_text(Path(files['pocket_view']).read_text())
     only_b, _ = predict(raw, 'cif', ['AUTH_B'], 10, root=tmp_path / 'b')
     assert {r['author_chain'] for p in only_b['pockets'] for r in p['residues']} <= {'AUTH_B'}
-    html = Path(files['pocket_view']).read_text()
-    assert '"insertion_code": "A"' in html or not any(r['insertion_code'] for r in pocket_residues)
+    embedded = view_payload(Path(files['pocket_view']).read_text())
+    assert embedded['pockets'] == report['pockets'] and embedded['points'] == report['surface_points']
+    assert any(r['insertion_code'] == 'A' for p in embedded['pockets'] for r in p['residues'])
     evidence['A2'] = {'mapped_residues': len(mapping), 'pockets': len(report['pockets']), 'pocket_author_chains': sorted(chains),
                       'insertion_code_residues_in_pockets': sorted({f"{r['author_chain']}:{r['author_residue_number']}{r['insertion_code']}"
                                                                     for r in pocket_residues if r['insertion_code']}),
@@ -251,5 +259,11 @@ def test_a5_top1_versus_top3_and_view(tmp_path, monkeypatch, adapter_runs, evide
     assert receipt['top_n'] == 1 and receipt['input_sha256'] == LOCK['7L13']['source_sha256']
     html = Path(out['pocket_view']).read_text()
     assert '$3Dmol' in html and 'window.verification' in html and 'Download receipt' in html
+    embedded = view_payload(html)
+    assert embedded['pockets'] == one['pockets'] and embedded['receipt']['top_n'] == 1
+    assert all(p['pocket_rank'] == 1 for p in one['surface_points']) and len(one['surface_points']) == one['pockets'][0]['surface_point_count']
+    sizes = {key: Path(files[key]).stat().st_size for key in predictor.FILES}
+    assert max(sizes.values()) < 1_000_000, sizes  # managed artifact upload is verified up to ~1.08 MB per file
+    evidence['output_sizes_7L13_top3'] = sizes
     evidence['A5'] = {'top1_rank_scores': [p['upstream_score'] for p in one['pockets']],
                       'top3_rank_scores': [p['upstream_score'] for p in three['pockets']]}

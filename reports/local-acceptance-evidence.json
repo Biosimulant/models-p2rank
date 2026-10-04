@@ -129,5 +129,15 @@
       9.26,
       5.97
     ]
+  },
+  "output_sizes_7L13_top3": {
+    "mapped_residues": 23495,
+    "pocket_view": 679463,
+    "processed_structure": 379809,
+    "raw_predictions": 2962,
+    "raw_residues": 27341,
+    "receipt_file": 1514,
+    "report_file": 50931,
+    "residue_map": 102979
   }
 }

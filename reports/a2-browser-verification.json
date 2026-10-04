@@ -1,18 +1,46 @@
 {
   "date": "2026-10-04",
-  "environment": "Claude desktop in-app browser (Chromium), local static server 127.0.0.1:8765, file outputs/a2/pocket-view.html produced by test_a2 from fixtures/mapping-edge.cif",
+  "environment": "Claude desktop in-app browser (Chromium), static server 127.0.0.1:8766, pocket-view.html from test_a2 at staging (gzip+base64 embedded payload, DecompressionStream)",
   "ready": true,
-  "pocket_centers_angstrom": [[11.093, 0.8061, -9.7802], [51.093, 0.8061, -9.7802]],
+  "pocket_centers_angstrom": [
+    [
+      11.093,
+      0.8061,
+      -9.7802
+    ],
+    [
+      51.093,
+      0.8061,
+      -9.7802
+    ]
+  ],
   "surface_points_rendered": 120,
   "highlighted_residues": 36,
   "highlighted_residues_with_zero_atoms": 0,
   "insertion_code_highlights": [
-    {"author_chain": "AUTH_A", "author_residue_number": 30, "insertion_code": "A", "internal_chain": "A", "internal_residue": 12, "atomCount": 9, "label": "AUTH_A:30A GLN (label LABEL_0:24)"},
-    {"author_chain": "AUTH_B", "author_residue_number": 30, "insertion_code": "A", "internal_chain": "B", "internal_residue": 12, "atomCount": 9, "label": "AUTH_B:30A GLN (label LABEL_1:24)"}
+    {
+      "author_chain": "AUTH_A",
+      "residue": "30A",
+      "atomCount": 9
+    },
+    {
+      "author_chain": "AUTH_B",
+      "residue": "30A",
+      "atomCount": 9
+    }
   ],
-  "top1_selector": {"centers": 1, "highlighted_residues": 18},
-  "top3_selector": {"centers": 2, "highlighted_residues": 36},
+  "top1_selector": {
+    "centers": 1,
+    "highlighted_residues": 18,
+    "surface_points": 60
+  },
+  "top3_selector": {
+    "centers": 2,
+    "highlighted_residues": 36,
+    "surface_points": 120
+  },
   "residue_toggle": "First checkbox (AUTH_A:30, distinct from AUTH_A:30A) toggled without error",
   "errors": "",
-  "screenshot": "a2-browser-pocket-view.jpg"
+  "screenshot": "a2-browser-pocket-view.jpg",
+  "view_bytes": 598719
 }
