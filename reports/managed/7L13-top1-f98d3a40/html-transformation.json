@@ -1,0 +1,11 @@
+{
+  "pocket-view.html": {
+    "downloaded_size": 676586,
+    "declared_size": 676219,
+    "injected_bytes": 367,
+    "injection": "Cloudflare Web Analytics beacon script",
+    "reconstructed_sha256": "09bf1ecbff1d56b718b2caa2827057d31e095d7595bc15084504d3094368d191",
+    "matches_declared_after_removal": true,
+    "scope": "Forensic reconstruction only; the transformed transfer itself still fails its declared digest"
+  }
+}

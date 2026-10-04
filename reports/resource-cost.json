@@ -1,0 +1,117 @@
+{
+  "provider": "modal",
+  "profile": "pro (2 CPU, 4096 MiB RAM, 2048 MiB disk, no GPU)",
+  "billing_mode": "free_beta",
+  "user_charge_usd": 0,
+  "approved_budget": "12 runs / $1.25 estimated provider cost (raised from 10 runs / $1.00 with user approval)",
+  "runs_used": 11,
+  "runs": [
+    {
+      "run_id": "8bc54725-d761-4d75-b033-d8b6fc9bade1",
+      "purpose": "preparation v0.1 (rev 2)",
+      "platform_duration_seconds": 3.885,
+      "timeout_cap_seconds": 900,
+      "preflight_provider_cost_usd_at_cap": 0.094969
+    },
+    {
+      "run_id": "6ee4c080-15e9-4bff-b9eb-3665d8abda5e",
+      "purpose": "preparation v0.2 (rev 3)",
+      "platform_duration_seconds": 4.542,
+      "timeout_cap_seconds": 900,
+      "preflight_provider_cost_usd_at_cap": 0.094969
+    },
+    {
+      "run_id": "589cbc6b-ef3d-4283-bd46-4d5fd12ec333",
+      "purpose": "preparation v0.3 (rev 4)",
+      "platform_duration_seconds": 24.445,
+      "timeout_cap_seconds": 900,
+      "preflight_provider_cost_usd_at_cap": 0.094969
+    },
+    {
+      "run_id": "750a5ccc-2609-41e7-b537-832e51edf1ab",
+      "purpose": "rev5 7L13 top-3 (6/8 files retained; superseded)",
+      "platform_duration_seconds": 12.469,
+      "timeout_cap_seconds": 600,
+      "preflight_provider_cost_usd_at_cap": 0.063313
+    },
+    {
+      "run_id": "b17feffc-4ff3-49a7-b94b-5eafc35548a2",
+      "purpose": "rev5 7L13 top-1 (superseded)",
+      "platform_duration_seconds": 13.634,
+      "timeout_cap_seconds": 600,
+      "preflight_provider_cost_usd_at_cap": 0.063313
+    },
+    {
+      "run_id": "b0351e69-961c-4302-80b1-1e66b6311f2c",
+      "purpose": "rev5 1STP (superseded)",
+      "platform_duration_seconds": 12.293,
+      "timeout_cap_seconds": 600,
+      "preflight_provider_cost_usd_at_cap": 0.063313
+    },
+    {
+      "run_id": "a66a3a7d-a22f-415f-9a9b-c543cf9d6812",
+      "purpose": "rev5 1CRN (superseded)",
+      "platform_duration_seconds": 11.15,
+      "timeout_cap_seconds": 600,
+      "preflight_provider_cost_usd_at_cap": 0.063313
+    },
+    {
+      "run_id": "d174ea14-0366-48f1-ae59-1833278aa503",
+      "purpose": "rev6 7L13 top-3 (public)",
+      "platform_duration_seconds": 17.331,
+      "timeout_cap_seconds": 600,
+      "preflight_provider_cost_usd_at_cap": 0.063313
+    },
+    {
+      "run_id": "f98d3a40-5283-413b-96c8-94faaa1a8414",
+      "purpose": "rev6 7L13 top-1 (public)",
+      "platform_duration_seconds": 13.713,
+      "timeout_cap_seconds": 600,
+      "preflight_provider_cost_usd_at_cap": 0.063313
+    },
+    {
+      "run_id": "779beba6-8679-4a61-8a6f-c6db3169f2a2",
+      "purpose": "rev6 1STP pilot (public)",
+      "platform_duration_seconds": 11.051,
+      "timeout_cap_seconds": 600,
+      "preflight_provider_cost_usd_at_cap": 0.063313
+    },
+    {
+      "run_id": "e0eab1ea-a7a4-4340-93b4-c2132c51eed3",
+      "purpose": "rev6 1CRN no-pocket (public)",
+      "platform_duration_seconds": 15.826,
+      "timeout_cap_seconds": 600,
+      "preflight_provider_cost_usd_at_cap": 0.063313
+    }
+  ],
+  "total_platform_duration_seconds": 140.339,
+  "preflight_provider_cost_usd_at_caps": 0.791411,
+  "duration_prorated_provider_cost_usd_estimate": 0.0148,
+  "actual_provider_invoice": "not available through MCP",
+  "managed_inference_elapsed_seconds_from_receipts": {
+    "7L13 top-3": 8.84,
+    "7L13 top-1": 5.11,
+    "1STP top-3": 4.135,
+    "1CRN top-3": 5.344
+  },
+  "local_measurements": {
+    "7L13 local adapter elapsed_seconds": 11.1,
+    "near-limit 9374-atom synthetic": {
+      "elapsed_seconds": 6.67,
+      "largest_output_bytes": 811863
+    },
+    "peak_child_rss_bytes_macos_composed_cli": 530759680
+  },
+  "managed_peak_memory": "not exposed by the platform",
+  "hosted_cold_warm_latency": "not measurable: hosting preflight rejected (no hosting resource exists)",
+  "idle_policy": "no hosted resource; managed runs are one-shot containers; proposed hosting max 1 container, scale to zero, 300 s timeout (not executed)",
+  "bounds": {
+    "upload_bytes": 2097152,
+    "protein_heavy_atoms": 10000,
+    "residues": 2000,
+    "chains": 62,
+    "top_n": "1-10",
+    "invocation_timeout_seconds": 300
+  },
+  "isolation": "Each invocation writes to its own mode-700 mkdtemp result directory and a separate scratch runtime directory deleted after use; public examples contain only RCSB CC0 structures and no signed URLs."
+}

@@ -1,0 +1,365 @@
+{
+  "scope": "Anonymous HTTPS requests from macOS; no owner credentials or signed URLs retained",
+  "checks": {
+    "lab": {
+      "status": 200,
+      "is_public": true,
+      "is_hub_listed": true,
+      "is_mine": false,
+      "latest_package_version": "0.1.0",
+      "qualified_package_name": "demi/p2rank-binding-pockets"
+    },
+    "hub_page": {
+      "status": 200,
+      "title_present": true
+    },
+    "public_lab_runs": {
+      "status": 200,
+      "total": 4,
+      "ids": [
+        "779beba6-8679-4a61-8a6f-c6db3169f2a2",
+        "d174ea14-0366-48f1-ae59-1833278aa503",
+        "e0eab1ea-a7a4-4340-93b4-c2132c51eed3",
+        "f98d3a40-5283-413b-96c8-94faaa1a8414"
+      ]
+    },
+    "package": {
+      "artifact_id": "b139f676-0571-4669-88b6-cac8049056b6",
+      "download_url_status": 200,
+      "download_status": 200,
+      "bytes": 122715583,
+      "sha256": "779527ea7d48d20bfacb73d5b3799d5885542406618647cad0e90c5bc6b0cc2e",
+      "matches_declared_artifact_sha256": true,
+      "members": 25,
+      "package_root": "payload/",
+      "bundles_match_lock": {
+        "p2rank-runtime-0.zip": true,
+        "p2rank-runtime-1.zip": true,
+        "viewer-3dmol-2.5.5.zip": true,
+        "reference-structures.zip": true,
+        "license-records.zip": true,
+        "corresponding-sources.zip": true
+      },
+      "source_files_match_staging": {
+        "models/predict/src/predictor.py": true,
+        "models/predict/src/structure.py": true,
+        "tests/test_acceptance.py": true,
+        "fixtures/fixture-lock.json": true,
+        "fixtures/7L13-reference-ligand.json": true,
+        "assets/runtime-lock.json": true,
+        "NOTICE.md": true,
+        "LICENSE": true
+      }
+    },
+    "runs": {
+      "7L13 top-3": {
+        "run_id": "d174ea14-0366-48f1-ae59-1833278aa503",
+        "status": 200,
+        "is_public": true,
+        "artifacts": [
+          {
+            "role": "mapped_residues",
+            "status": 200,
+            "declared_size": 23495,
+            "bytes": 23495,
+            "verified": true
+          },
+          {
+            "role": "pocket_view",
+            "status": 200,
+            "declared_size": 679459,
+            "bytes": 679459,
+            "verified": true
+          },
+          {
+            "role": "processed_structure",
+            "status": 200,
+            "declared_size": 379809,
+            "bytes": 379809,
+            "verified": true
+          },
+          {
+            "role": "raw_predictions",
+            "status": 200,
+            "declared_size": 2962,
+            "bytes": 2962,
+            "verified": true
+          },
+          {
+            "role": "raw_residues",
+            "status": 200,
+            "declared_size": 27341,
+            "bytes": 27341,
+            "verified": true
+          },
+          {
+            "role": "receipt_file",
+            "status": 200,
+            "declared_size": 1513,
+            "bytes": 1513,
+            "verified": true
+          },
+          {
+            "role": "report_file",
+            "status": 200,
+            "declared_size": 50930,
+            "bytes": 50930,
+            "verified": true
+          },
+          {
+            "role": "residue_map",
+            "status": 200,
+            "declared_size": 102979,
+            "bytes": 102979,
+            "verified": true
+          },
+          {
+            "role": "results",
+            "status": 200,
+            "declared_size": 66760,
+            "bytes": 66760,
+            "verified": true
+          },
+          {
+            "role": "report",
+            "status": 200,
+            "declared_size": 65498,
+            "bytes": 65498,
+            "verified": true
+          }
+        ]
+      },
+      "7L13 top-1": {
+        "run_id": "f98d3a40-5283-413b-96c8-94faaa1a8414",
+        "status": 200,
+        "is_public": true,
+        "artifacts": [
+          {
+            "role": "mapped_residues",
+            "status": 200,
+            "declared_size": 23495,
+            "bytes": 23495,
+            "verified": true
+          },
+          {
+            "role": "pocket_view",
+            "status": 200,
+            "declared_size": 676219,
+            "bytes": 676219,
+            "verified": true
+          },
+          {
+            "role": "processed_structure",
+            "status": 200,
+            "declared_size": 379809,
+            "bytes": 379809,
+            "verified": true
+          },
+          {
+            "role": "raw_predictions",
+            "status": 200,
+            "declared_size": 2962,
+            "bytes": 2962,
+            "verified": true
+          },
+          {
+            "role": "raw_residues",
+            "status": 200,
+            "declared_size": 27341,
+            "bytes": 27341,
+            "verified": true
+          },
+          {
+            "role": "receipt_file",
+            "status": 200,
+            "declared_size": 1513,
+            "bytes": 1513,
+            "verified": true
+          },
+          {
+            "role": "report_file",
+            "status": 200,
+            "declared_size": 24995,
+            "bytes": 24995,
+            "verified": true
+          },
+          {
+            "role": "residue_map",
+            "status": 200,
+            "declared_size": 102979,
+            "bytes": 102979,
+            "verified": true
+          },
+          {
+            "role": "results",
+            "status": 200,
+            "declared_size": 38183,
+            "bytes": 38183,
+            "verified": true
+          },
+          {
+            "role": "report",
+            "status": 200,
+            "declared_size": 36921,
+            "bytes": 36921,
+            "verified": true
+          }
+        ]
+      },
+      "1STP top-3 pilot": {
+        "run_id": "779beba6-8679-4a61-8a6f-c6db3169f2a2",
+        "status": 200,
+        "is_public": true,
+        "artifacts": [
+          {
+            "role": "mapped_residues",
+            "status": 200,
+            "declared_size": 4693,
+            "bytes": 4693,
+            "verified": true
+          },
+          {
+            "role": "pocket_view",
+            "status": 200,
+            "declared_size": 574271,
+            "bytes": 574271,
+            "verified": true
+          },
+          {
+            "role": "processed_structure",
+            "status": 200,
+            "declared_size": 73143,
+            "bytes": 73143,
+            "verified": true
+          },
+          {
+            "role": "raw_predictions",
+            "status": 200,
+            "declared_size": 425,
+            "bytes": 425,
+            "verified": true
+          },
+          {
+            "role": "raw_residues",
+            "status": 200,
+            "declared_size": 5516,
+            "bytes": 5516,
+            "verified": true
+          },
+          {
+            "role": "receipt_file",
+            "status": 200,
+            "declared_size": 1502,
+            "bytes": 1502,
+            "verified": true
+          },
+          {
+            "role": "report_file",
+            "status": 200,
+            "declared_size": 13811,
+            "bytes": 13811,
+            "verified": true
+          },
+          {
+            "role": "residue_map",
+            "status": 200,
+            "declared_size": 20410,
+            "bytes": 20410,
+            "verified": true
+          },
+          {
+            "role": "results",
+            "status": 200,
+            "declared_size": 25869,
+            "bytes": 25869,
+            "verified": true
+          },
+          {
+            "role": "report",
+            "status": 200,
+            "declared_size": 24612,
+            "bytes": 24612,
+            "verified": true
+          }
+        ]
+      },
+      "1CRN no-pocket pilot": {
+        "run_id": "e0eab1ea-a7a4-4340-93b4-c2132c51eed3",
+        "status": 200,
+        "is_public": true,
+        "artifacts": [
+          {
+            "role": "mapped_residues",
+            "status": 200,
+            "declared_size": 1833,
+            "bytes": 1833,
+            "verified": true
+          },
+          {
+            "role": "pocket_view",
+            "status": 200,
+            "declared_size": 557099,
+            "bytes": 557099,
+            "verified": true
+          },
+          {
+            "role": "processed_structure",
+            "status": 200,
+            "declared_size": 26649,
+            "bytes": 26649,
+            "verified": true
+          },
+          {
+            "role": "raw_predictions",
+            "status": 200,
+            "declared_size": 127,
+            "bytes": 127,
+            "verified": true
+          },
+          {
+            "role": "raw_residues",
+            "status": 200,
+            "declared_size": 2141,
+            "bytes": 2141,
+            "verified": true
+          },
+          {
+            "role": "receipt_file",
+            "status": 200,
+            "declared_size": 1506,
+            "bytes": 1506,
+            "verified": true
+          },
+          {
+            "role": "report_file",
+            "status": 200,
+            "declared_size": 1587,
+            "bytes": 1587,
+            "verified": true
+          },
+          {
+            "role": "residue_map",
+            "status": 200,
+            "declared_size": 7702,
+            "bytes": 7702,
+            "verified": true
+          },
+          {
+            "role": "results",
+            "status": 200,
+            "declared_size": 12248,
+            "bytes": 12248,
+            "verified": true
+          },
+          {
+            "role": "report",
+            "status": 200,
+            "declared_size": 10993,
+            "bytes": 10993,
+            "verified": true
+          }
+        ]
+      }
+    }
+  }
+}

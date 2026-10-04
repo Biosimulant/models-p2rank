@@ -1,0 +1,9 @@
+{
+  "date": "2026-10-04",
+  "environment": "Claude desktop in-app browser (Chromium); downloaded managed pocket-view.html artifacts served from a local static server (127.0.0.1:8766)",
+  "note": "Downloaded HTML includes the 367-byte Cloudflare beacon injected in transit (see html-transformation.json); the view renders independently of it.",
+  "7L13_top3_run_d174ea14": {"ready": true, "centers": 3, "surface_points": 281, "highlighted_residues": 64, "zero_atom_residues": 0,
+    "titles": ["Pocket 1 — score 10.96 / probability 0.588", "Pocket 2 — score 9.26 / probability 0.497", "Pocket 3 — score 5.97 / probability 0.293"], "error": "", "screenshot": "7L13-top3-d174ea14/pocket-view-browser.jpg"},
+  "7L13_top1_run_f98d3a40": {"ready": true, "centers": 1, "surface_points": 148, "highlighted_residues": 28, "zero_atom_residues": 0,
+    "titles": ["Pocket 1 — score 10.96 / probability 0.588"], "error": ""}
+}

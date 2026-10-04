@@ -1,0 +1,18 @@
+{
+  "status": "ok",
+  "local_status": "ok",
+  "pockets_equal": true,
+  "residues_equal": true,
+  "surface_points_equal": true,
+  "scores": [
+    10.96
+  ],
+  "renders": [
+    "text",
+    "structure3d",
+    "table"
+  ],
+  "managed_elapsed_seconds": 5.110349016000001,
+  "receipt_top_n": 1,
+  "receipt_input_sha256": "fb17b4cd4030ab92d5add0ab34603946e0fd74a0e8ed5b3e46f0c23b037e1023"
+}

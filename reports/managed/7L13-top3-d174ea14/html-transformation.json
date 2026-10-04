@@ -1,0 +1,20 @@
+{
+  "pocket-view.html": {
+    "downloaded_size": 679826,
+    "declared_size": 679459,
+    "injected_bytes": 367,
+    "injection": "Cloudflare Web Analytics beacon script",
+    "reconstructed_sha256": "1563ca0181f3ddbfc8f8a300653c2e81280024230c36e7cea2df005888f049c2",
+    "matches_declared_after_removal": true,
+    "scope": "Forensic reconstruction only; the transformed transfer itself still fails its declared digest"
+  },
+  "report.html": {
+    "downloaded_size": 65865,
+    "declared_size": 65498,
+    "injected_bytes": 367,
+    "injection": "Cloudflare Web Analytics beacon script",
+    "reconstructed_sha256": "ba2e2eb8f94f38c7bea042600aa1a762b74a8009ea403fe305d5dc67ca1d3f78",
+    "matches_declared_after_removal": true,
+    "scope": "Forensic reconstruction only; the transformed transfer itself still fails its declared digest"
+  }
+}

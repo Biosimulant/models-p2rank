@@ -1,0 +1,69 @@
+{
+  "fixture": "7L13.cif",
+  "top_n": 3,
+  "artifact_byte_checks": {
+    "residue_map.json": true,
+    "predictions.csv": true,
+    "report.html": false,
+    "processed.pdb": true,
+    "pocket-view.html": false,
+    "receipt_file.json": true,
+    "results.json": true,
+    "residues.csv": true,
+    "report_file.json": true,
+    "mapped_residues.csv": true
+  },
+  "all_artifacts_verified": false,
+  "byte_identical_to_local": {
+    "predictions.csv": true,
+    "residues.csv": true,
+    "processed.pdb": true,
+    "mapped_residues.csv": true
+  },
+  "report": {
+    "status": "ok",
+    "local_status": "ok",
+    "pockets_equal": true,
+    "residues_equal": true,
+    "surface_points_equal": true,
+    "scores": [
+      10.96,
+      9.26,
+      5.97
+    ],
+    "probabilities": [
+      0.588,
+      0.497,
+      0.293
+    ],
+    "centers_angstrom": [
+      [
+        4.0906,
+        -1.9965,
+        -21.909
+      ],
+      [
+        -23.2055,
+        -3.3947,
+        -26.3383
+      ],
+      [
+        15.0638,
+        13.1484,
+        -1.3634
+      ]
+    ],
+    "managed_elapsed_seconds": 8.839943738000002,
+    "managed_java_version": [
+      "openjdk version \"21.0.8\" 2025-07-15 LTS"
+    ]
+  },
+  "visual_renders": [
+    "text",
+    "structure3d",
+    "table"
+  ],
+  "table_matches_report": true,
+  "receipt_input_sha256": "fb17b4cd4030ab92d5add0ab34603946e0fd74a0e8ed5b3e46f0c23b037e1023",
+  "mapped_residue_rows": 606
+}

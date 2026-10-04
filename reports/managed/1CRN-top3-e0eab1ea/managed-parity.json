@@ -1,0 +1,15 @@
+{
+  "status": "no_pockets",
+  "local_status": "no_pockets",
+  "pockets_equal": true,
+  "residues_equal": true,
+  "surface_points_equal": true,
+  "scores": [],
+  "renders": [
+    "text",
+    "structure3d"
+  ],
+  "managed_elapsed_seconds": 5.343889888999996,
+  "receipt_top_n": 3,
+  "receipt_input_sha256": "23787562c427d7c1abe5420e86d5f1d0a6c7007dec1e8ce85645a6d69c32e8ba"
+}
