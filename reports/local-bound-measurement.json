@@ -1,0 +1,19 @@
+{
+  "synthetic": "7L13 protein duplicated with +80 Angstrom x translation (software bound test, not a deposited structure)",
+  "input_bytes": 661364,
+  "protein_atoms": 9374,
+  "residues": 1212,
+  "pockets_returned": 10,
+  "elapsed_seconds": 6.665674790972844,
+  "peak_child_rss_bytes_macos": 598474752,
+  "output_sizes": {
+    "processed_structure": 759456,
+    "raw_predictions": 5864,
+    "raw_residues": 54675,
+    "report_file": 143469,
+    "receipt_file": 1524,
+    "residue_map": 205957,
+    "mapped_residues": 46886,
+    "pocket_view": 811863
+  }
+}

@@ -5,7 +5,7 @@
 | Field | Value |
 | --- | --- |
 | MTS identifier | P2R-MTS-001 |
-| Version | 1.1 |
+| Version | 1.2 |
 | Status | Frozen for release verification |
 | Last revised | 2026-10-04 |
 | MRS | P2R-MRS-001 version 1.0 (approved by the user's exact-brief implementation request) |
@@ -14,6 +14,7 @@
 Revision history:
 
 - 1.0, 2026-10-04: predictor, preprocessing and metric design frozen.
+- 1.2, 2026-10-04: bounded output sizes after managed run 750a5ccc retained only 6 of 8 files for 7L13 (upload aborted at a 1.44 MB report JSON): the typed report keeps returned pockets only (every residue score stays in mapped_residues.csv), JSON files are written compactly and pocket-view.html embeds a gzip+base64 payload. No scientific value or acceptance criterion changed.
 - 1.1, 2026-10-04: implementation as built. Stored (uncompressed) runtime chunks so managed acquisition reproduces them byte for byte; explicit `execution_failed` outcome; retained results written under the run's `outputs/`; compact runtime lock with per-member digests kept in the repository; fixtures pinned by SHA-256 and the default example switched to the deposited 7L13 mmCIF. No acceptance criterion changed.
 
 ## 2. Technical Decision Summary
@@ -52,7 +53,7 @@ Inputs: exactly one of `structure_file` (PDB, `.pdb`) or `mmcif_file` (text mmCI
 
 Outcomes (`report.status`): `ok`; `no_pockets` (valid empty upstream result, raw CSVs and 3D view still retained); `invalid_input` with `receipt.error_code` in {`structure_input`, `structure_file`, `unsupported_format`, `input_size`, `parse_error`, `no_protein`, `chain_selection`, `missing_chain`, `invalid_coordinate`, `ambiguous_residue`, `chain_limit`, `structure_limit`, `top_n`}; `timeout`; `execution_failed`. Failures never produce pockets.
 
-Outputs: `report` record (status, pockets, residues, surface_points, receipt; mixed record, unit `1`, each field documents its unit: centers and surface points in Å, score and probability dimensionless); `pocket_count` (count); files `processed_structure` (PDB), `raw_predictions` and `raw_residues` (unchanged upstream CSV), `mapped_residues` (CSV with original identities and upstream residue scores), `residue_map` (JSON), `report_file`, `receipt_file` (JSON), `pocket_view` (self-contained HTML).
+Outputs: `report` record (status; pockets limited to `top_n`, each with original residue identities and a surface point count; residues and surface points of the returned pockets only; receipt; mixed record, unit `1`, each field documents its unit: centers and surface points in Å, score and probability dimensionless); `pocket_count` (count); files `processed_structure` (PDB), `raw_predictions` and `raw_residues` (unchanged upstream CSV), `mapped_residues` (CSV with original identities and upstream residue scores), `residue_map` (JSON), `report_file`, `receipt_file` (JSON), `pocket_view` (self-contained HTML; gzip+base64 embedded data inflated locally by the browser). For the 7L13 example the largest retained file is 679 KB.
 
 ## 8. Model Method and Uncertainty
 
