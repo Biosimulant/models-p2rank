@@ -6,7 +6,7 @@
   "response": {"code": "hosting_request_invalid", "message": "Unsupported hosted file format for structure_file", "retryable": false, "request_id": "d6620b95-72b6-49fb-be00-d7a0f4587fd6"},
   "root_cause_source_read_only": {
     "file": "biosimulant-backend/curated_serving/spec.py:25-29",
-    "constants": "INPUT_TYPES = (number, integer, boolean, string, stored_image); IMAGE_FORMATS = (jpeg, png); MAX_IMAGE_BYTES = 20 MiB",
+    "note": "Local source checkout may lag production (item 02 reports hosted CSV uploads); the live preflight above is authoritative", "constants": "INPUT_TYPES = (number, integer, boolean, string, stored_image); IMAGE_FORMATS = (jpeg, png); MAX_IMAGE_BYTES = 20 MiB",
     "also": "Reusable Files storage rejects chemical/x-cif (external Files service allowlist); hosted file outputs are listed as metadata only, structure3d visuals inline within an 8 MB result budget"
   },
   "decision": "Not executed. No hosting resource exists; production remains on Modal and unchanged. Hosting a fixed example without user upload would not satisfy H5 (real user input) and was not attempted.",

@@ -37,7 +37,7 @@ Updated 2026-10-04. Gate-by-gate evidence: [acceptance.md](acceptance.md).
   - Estimated provider cost: $0.79 at the timeout caps, about $0.015 pro-rated by duration. User charge $0.
   - Hosted cold/warm latency: not measurable.
 - **Caveats and blockers:**
-  - Hosted inputs support only JPEG/PNG images.
+  - Hosting does not support PDB/mmCIF file inputs (live preflight rejection).
   - Files storage rejects PDB and mmCIF, so users can't yet run their own structures through platform uploads.
   - Agent-gateway HTML downloads receive Cloudflare beacon injection.
   - Scientific scope: parity is software verification; 7L13 is a single-structure demonstration in which top-1 missed and top-3 found the ligand pocket.
