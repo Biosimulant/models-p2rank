@@ -1,0 +1,50 @@
+{
+  "date": "2026-10-04",
+  "environment": "macOS arm64, jdk4py 21.0.8.1 Java, upstream prank launcher, -threads 1",
+  "comparison": "Unmodified P2Rank 2.5.1 distribution vs the same distribution with bin/lib/vecmath-1.3.1.jar and bin/lib/openchart-1.4.2.jar removed, both on the original deposited mmCIF files",
+  "vecmath_1_3_1_classes_missing_from_1_5_2": 0,
+  "results": {
+    "1CRN": {
+      "1CRN.cif_predictions.csv": {
+        "identical": true,
+        "sha256": "59aa76673296f5aaf058cd70b7c02ca7c6a20bb834dfee95c78ab27990811e60"
+      },
+      "1CRN.cif_residues.csv": {
+        "identical": true,
+        "sha256": "e29a52ded9c5c448b779e10ada41c348ce82f6dcfe5275436fe5ad608acf77b0"
+      },
+      "points (decompressed)": {
+        "identical": true,
+        "sha256": "01d766f48eac2d268cf3773e404a106d735fdbd7b7a0f719e3f96a03bfc08480"
+      }
+    },
+    "1STP": {
+      "1STP.cif_predictions.csv": {
+        "identical": true,
+        "sha256": "7eaf7977afc49ac030d70ce178f4bb24ecb8cfe7b536c2bd07b9e3c5289c93bf"
+      },
+      "1STP.cif_residues.csv": {
+        "identical": true,
+        "sha256": "c2b2f0fa58aa72881e92807369555519dbd960aed651c84530e7654a92474b39"
+      },
+      "points (decompressed)": {
+        "identical": true,
+        "sha256": "28b5baa7d3d92778c6b4e5ab97eb869fc57d798ca3a8bd46c64d51bfa4bc59aa"
+      }
+    },
+    "7L13": {
+      "7L13.cif_predictions.csv": {
+        "identical": true,
+        "sha256": "323fea67d5037cf1a99c2759f7fa137f7c30786ea7679f588c008d28324a1db5"
+      },
+      "7L13.cif_residues.csv": {
+        "identical": true,
+        "sha256": "6d6d3effaf58aa1ac0dc2378e7295bc0e641063f2006244d0bd84e758a700f75"
+      },
+      "points (decompressed)": {
+        "identical": true,
+        "sha256": "ca67973fdd2cf8b05f5b43e07d56538a0100c1dfbb22487f4f0d6f716f4629f1"
+      }
+    }
+  }
+}

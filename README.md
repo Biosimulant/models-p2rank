@@ -12,6 +12,8 @@ Layout:
 - `labs/runtime-preparation` — private one-time Lab that downloads the pinned P2Rank release archive and rebuilds byte-identical stored runtime chunks for the workspace. No scientific result.
 - `scripts/inventory_assets.py` — rebuilds `assets/p2rank-runtime-{0,1}.zip` and `runtime-lock.json` from `sources/p2rank_2.5.1.tar.gz` (sha256 `d243f2d9…b274`). The zips are not committed; they are reproduced byte-for-byte locally or by the runtime-preparation Lab.
 - `specifications/p2rank-binding-pockets` — MRS/MTS.
+- `scripts/build_bundles.py` — rebuilds the pinned viewer, reference-structure, license-record and corresponding-source bundles after `inventory_assets.py`.
+- `labs/binding-pockets/THIRD_PARTY_NOTICES.md` — per-jar licenses, the two jars omitted from the shipped runtime (`vecmath-1.3.1`, `openchart-1.4.2`) and corresponding-source locations.
 
 Local verification (Python 3.12, `requirements-test.txt`): download and unpack the release archive into `sources/`, run `python scripts/inventory_assets.py`, then `python -m pytest labs/binding-pockets/tests -q` and `python scripts/verify_runtime.py`. Local CLI runs create no managed Run or Passport.
 

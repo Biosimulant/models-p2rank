@@ -8,7 +8,7 @@ from pathlib import Path
 import gemmi
 import pytest
 
-from conftest import LAB, read_csv, standalone
+from conftest import LAB, example_path, read_csv, standalone
 from src import predictor
 from src.predictor import PocketPredictor, predict
 from src.structure import InputError, preprocess
@@ -42,12 +42,26 @@ def test_runtime_assets_match_frozen_distribution(tmp_path):
     assert (tmp_path / 'models/default').is_dir() and (tmp_path / 'bin/p2rank.jar').is_file()
 
 
+LOCK = json.loads((LAB / 'fixtures/fixture-lock.json').read_text())
+
+
+def digest(raw):
+    return hashlib.sha256(raw).hexdigest()
+
+
 @pytest.mark.parametrize('name', REFERENCES)
 def test_frozen_preprocessing_fixtures(name):
-    prep = preprocess((LAB / f'fixtures/{name}.cif').read_bytes(), 'cif', [])
-    assert prep['pdb'] == (LAB / f'fixtures/{name}-protein.pdb').read_text()
-    assert prep['mapping'] == json.loads((LAB / f'fixtures/{name}-mapping.json').read_text())['mapping']
+    raw = example_path(f'{name}.cif').read_bytes()
+    assert digest(raw) == LOCK[name]['source_sha256']
+    prep = preprocess(raw, 'cif', [])
+    assert digest(prep['pdb'].encode()) == LOCK[name]['processed_pdb_sha256']
+    assert digest(json.dumps(prep['mapping'], sort_keys=True).encode()) == LOCK[name]['mapping_sha256']
     assert 'HETATM' not in prep['pdb']
+
+
+def test_mapping_fixture_is_reproducible():
+    from mapping_fixture import build
+    assert digest(build().encode()) == LOCK['mapping-edge']['sha256']
 
 
 @pytest.mark.parametrize('name', REFERENCES)
@@ -56,12 +70,12 @@ def test_a1_parity_with_standalone_distribution(name, adapter_runs, tmp_path, ev
     adapter_rows = read_csv(files['raw_predictions'])
     adapter_residues = read_csv(files['raw_residues'])
     # Exact native parity on the identical processed coordinates.
-    up_rows, up_residues = standalone(LAB / f'fixtures/{name}-protein.pdb', tmp_path / 'processed')
+    up_rows, up_residues = standalone(Path(files['processed_structure']), tmp_path / 'processed')
     assert_same_predictions(adapter_rows, up_rows)
-    strip = lambda rows: [{k: v for k, v in r.items()} for r in rows]
-    assert strip(adapter_residues) == strip(up_residues)
+    assert [r['name'] for r in adapter_rows] == [r['name'] for r in up_rows]
+    assert adapter_residues == up_residues
     # Standalone run on the original deposited mmCIF; reversible map must restore author identities.
-    orig_rows, orig_residues = standalone(LAB / f'fixtures/{name}.cif', tmp_path / 'original')
+    orig_rows, orig_residues = standalone(example_path(f'{name}.cif'), tmp_path / 'original')
     lookup = {f"{r['internal_chain']}_{r['internal_residue']}": f"{r['author_chain']}_{r['author_residue_number']}{r['insertion_code']}"
               for r in json.loads(Path(files['residue_map']).read_text())}
     assert_same_predictions(adapter_rows, orig_rows, translate=lambda t: lookup[t])
@@ -93,7 +107,8 @@ def atoms_by_residue(structure, chain_name, key):
 
 
 def test_a2_insertion_codes_gaps_and_duplicate_author_numbers(tmp_path, evidence):
-    raw = (LAB / 'fixtures/mapping-edge.cif').read_bytes()
+    from mapping_fixture import build
+    raw = build().encode()
     report, files = predict(raw, 'cif', [], 10, root=tmp_path)
     mapping = json.loads(Path(files['residue_map']).read_text())
     original = gemmi.make_structure_from_block(gemmi.cif.read_string(raw.decode()).sole_block())
@@ -117,9 +132,10 @@ def test_a2_insertion_codes_gaps_and_duplicate_author_numbers(tmp_path, evidence
     chains = {r['author_chain'] for r in pocket_residues}
     assert any(r['insertion_code'] == 'A' for r in pocket_residues), 'insertion-code residue must be highlighted in a pocket'
     assert chains == {'AUTH_A', 'AUTH_B'}
-    browser = LAB.parents[1] / 'outputs/a2'
-    browser.mkdir(parents=True, exist_ok=True)
-    (browser / 'pocket-view.html').write_text(Path(files['pocket_view']).read_text())
+    browser = LAB.parents[1] / 'outputs'
+    if browser.is_dir():
+        (browser / 'a2').mkdir(exist_ok=True)
+        (browser / 'a2/pocket-view.html').write_text(Path(files['pocket_view']).read_text())
     only_b, _ = predict(raw, 'cif', ['AUTH_B'], 10, root=tmp_path / 'b')
     assert {r['author_chain'] for p in only_b['pockets'] for r in p['residues']} <= {'AUTH_B'}
     html = Path(files['pocket_view']).read_text()
@@ -165,7 +181,7 @@ PROTEIN_FREE = ('HETATM    1  O   HOH A   1       0.000   0.000   0.000  1.00 10
     (b'x' * (2 * 1024 * 1024 + 1), 'pdb', [], 3, 'input_size'),
 ])
 def test_a4_invalid_inputs_are_explicit(raw, fmt, chains, top_n, code, tmp_path):
-    raw = raw if raw is not None else (LAB / 'fixtures/1STP.cif').read_bytes()
+    raw = raw if raw is not None else example_path('1STP.cif').read_bytes()
     with pytest.raises(InputError) as error:
         predict(raw, fmt, chains, top_n, root=tmp_path)
     assert error.value.code == code
@@ -193,7 +209,7 @@ def execute(tmp_path, monkeypatch, **values):
 
 
 def test_a4_module_outcomes(tmp_path, monkeypatch, evidence):
-    module, out = execute(tmp_path, monkeypatch, structure_file='fixtures/1CRN-protein.pdb',
+    module, out = execute(tmp_path, monkeypatch, structure_file='fixtures/1CRN.cif',
                           mmcif_file='fixtures/1CRN.cif', chains_json='[]', top_n=3)
     assert out['report']['status'] == 'invalid_input' and out['report']['receipt']['error_code'] == 'structure_input'
     bad = tmp_path / 'protein.txt'
@@ -202,7 +218,7 @@ def test_a4_module_outcomes(tmp_path, monkeypatch, evidence):
     assert out['report']['receipt']['error_code'] == 'unsupported_format'
     assert [v['render'] for v in module.visualize()] == ['text']
     monkeypatch.setattr(predictor, 'TIMEOUT_SECONDS', 0.5)
-    module, out = execute(tmp_path, monkeypatch, structure_file='fixtures/7L13-protein.pdb', chains_json='[]', top_n=3)
+    module, out = execute(tmp_path, monkeypatch, mmcif_file='fixtures/7L13.cif', chains_json='[]', top_n=3)
     assert out['report']['status'] == 'timeout' and out['pocket_count'] == 0
     monkeypatch.setattr(predictor, 'TIMEOUT_SECONDS', 300)
     original = predictor.invoke
@@ -211,13 +227,13 @@ def test_a4_module_outcomes(tmp_path, monkeypatch, evidence):
         (install / 'bin/p2rank.jar').write_bytes(b'not a jar')
         return original(install, pdb, out, timeout)
     monkeypatch.setattr(predictor, 'invoke', failing)
-    module, out = execute(tmp_path, monkeypatch, structure_file='fixtures/7L13-protein.pdb', chains_json='[]', top_n=3)
+    module, out = execute(tmp_path, monkeypatch, mmcif_file='fixtures/7L13.cif', chains_json='[]', top_n=3)
     assert out['report']['status'] == 'execution_failed' and out['report']['pockets'] == []
     evidence.setdefault('A4', {})['module_outcomes'] = ['structure_input', 'unsupported_format', 'timeout', 'execution_failed']
 
 
 def test_a5_top1_versus_top3_and_view(tmp_path, monkeypatch, adapter_runs, evidence):
-    module, out = execute(tmp_path, monkeypatch, structure_file='fixtures/7L13-protein.pdb', chains_json='[]', top_n=1)
+    module, out = execute(tmp_path, monkeypatch, mmcif_file='fixtures/7L13.cif', chains_json='[]', top_n=1)
     three, files = adapter_runs('7L13', top_n=3)
     one = out['report']
     assert one['status'] == 'ok' and len(one['pockets']) == 1 and len(three['pockets']) == 3
@@ -228,7 +244,7 @@ def test_a5_top1_versus_top3_and_view(tmp_path, monkeypatch, adapter_runs, evide
     for key in predictor.FILES:
         assert Path(out[key]).is_file() and str(tmp_path / 'outputs') in out[key]
     receipt = json.loads(Path(out['receipt_file']).read_text())
-    assert receipt['top_n'] == 1 and receipt['input_sha256'] == hashlib.sha256((LAB / 'fixtures/7L13-protein.pdb').read_bytes()).hexdigest()
+    assert receipt['top_n'] == 1 and receipt['input_sha256'] == LOCK['7L13']['source_sha256']
     html = Path(out['pocket_view']).read_text()
     assert '$3Dmol' in html and 'window.verification' in html and 'Download receipt' in html
     evidence['A5'] = {'top1_rank_scores': [p['upstream_score'] for p in one['pockets']],

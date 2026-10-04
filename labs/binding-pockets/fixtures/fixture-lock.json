@@ -1,0 +1,34 @@
+{
+  "1CRN": {
+    "source": "https://files.rcsb.org/download/1CRN.cif",
+    "source_sha256": "23787562c427d7c1abe5420e86d5f1d0a6c7007dec1e8ce85645a6d69c32e8ba",
+    "source_size_bytes": 69506,
+    "processed_pdb_sha256": "a883deb21ed9a097437df30db0fbc789e5ce823477559cdbf3113b28c5410e9d",
+    "mapping_sha256": "aa0463267cf7c6ccefd7e99604be04c3923dc5491cac49afabb03f5336e4b400",
+    "protein_heavy_atoms": 327,
+    "residues": 46
+  },
+  "1STP": {
+    "source": "https://files.rcsb.org/download/1STP.cif",
+    "source_sha256": "36be77b9722ebb9f603b27bf16cbc30057f87ab9923a2d2adab0eadbdb30c30f",
+    "source_size_bytes": 148195,
+    "processed_pdb_sha256": "466be52ecff9f2bc87036df8b18d3b0f0ca80eaaad8559d5e3f293e8bf59a203",
+    "mapping_sha256": "c578d0ab415df3a64cf5504a79a7383e5a7d2a3def2c175ee46f6b9bec4a45cc",
+    "protein_heavy_atoms": 901,
+    "residues": 121
+  },
+  "7L13": {
+    "source": "https://files.rcsb.org/download/7L13.cif",
+    "source_sha256": "fb17b4cd4030ab92d5add0ab34603946e0fd74a0e8ed5b3e46f0c23b037e1023",
+    "source_size_bytes": 575073,
+    "processed_pdb_sha256": "29d2da834d81993d17a0e516e246abd1ed0d4f2c06718c47700bbe52eb1d0c81",
+    "mapping_sha256": "968871139f26d8d42c23b689a2b902aca6bf2a311755a9f27443e6dc510a654e",
+    "protein_heavy_atoms": 4687,
+    "residues": 606
+  },
+  "mapping-edge": {
+    "derived_from": "1STP via tests/mapping_fixture.py (gemmi 0.7.3)",
+    "sha256": "705302ed09b8f6feaf234c6eccb36e8af00c20613100186be46ad0686b2bb79a",
+    "size_bytes": 165752
+  }
+}

@@ -1,0 +1,327 @@
+[
+  {
+    "member": "FastRandomForest_0.99_src.jar",
+    "url": "https://raw.githubusercontent.com/rdk/p2rank/9808a7723be9a94e2ffc21ab5f724cb6ae4ba01e/lib/FastRandomForest_0.99_src.jar",
+    "size_bytes": 53036,
+    "sha256": "9a92d5ef38a3a3876b7b7465828454ea8fce294544bb53ee078ee2d0f4a6ab62",
+    "for_jars": [
+      "bin/lib/FastRandomForest_0.99.jar",
+      "bin/lib/FastRandomForest_0.99_src.jar"
+    ]
+  },
+  {
+    "member": "FasterForest-2.5.2-246546ac8c18.tar.gz",
+    "url": "https://api.github.com/repos/rdk/FasterForest/tarball/246546ac8c184c16dc2f432e8d1d5256776e0b7d",
+    "size_bytes": 780768,
+    "sha256": "162e1bdb80b979ce3e057e6687be8d03f3bd860bac98c7781020923393e14ba9",
+    "for_jars": [
+      "bin/lib/FasterForest-2.5.2.jar"
+    ]
+  },
+  {
+    "member": "FasterMolecularSurface-1.0-207cc34debc4.tar.gz",
+    "url": "https://api.github.com/repos/rdk/FasterMolecularSurface/tarball/207cc34debc41f50bab1d879d08da88da9309763",
+    "size_bytes": 72776,
+    "sha256": "11786971291607d9f1522a143cb47095bde09b79adb168a8697cc5c2a08a3220",
+    "for_jars": [
+      "bin/lib/faster-molecular-surface-1.0.jar"
+    ]
+  },
+  {
+    "member": "biojava-7.2.2-rdk.1-49c633adae29.tar.gz",
+    "url": "https://api.github.com/repos/rdk/biojava/tarball/49c633adae29f9fea58395b4c896e478b677e899",
+    "size_bytes": 17901906,
+    "sha256": "9ba4b460f58335ca1dc47d2a55949585de5418f9bbf37e9d1b3f19a48f66be4e",
+    "for_jars": [
+      "bin/lib/biojava-structure-7.2.2-rdk.1.jar"
+    ]
+  },
+  {
+    "member": "biojava-alignment-7.2.2-sources.jar",
+    "url": "https://repo1.maven.org/maven2/org/biojava/biojava-alignment/7.2.2/biojava-alignment-7.2.2-sources.jar",
+    "size_bytes": 120428,
+    "sha256": "7f0b6f6814730baf704af0bde0aab687f11a6135e2acd404106e20497138af97",
+    "for_jars": [
+      "bin/lib/biojava-alignment-7.2.2.jar"
+    ]
+  },
+  {
+    "member": "biojava-core-7.2.2-sources.jar",
+    "url": "https://repo1.maven.org/maven2/org/biojava/biojava-core/7.2.2/biojava-core-7.2.2-sources.jar",
+    "size_bytes": 403853,
+    "sha256": "55ff266ddc7893d6a965fb31bbd03593b82b1ec5ea625d64a33842763d014682",
+    "for_jars": [
+      "bin/lib/biojava-core-7.2.2.jar"
+    ]
+  },
+  {
+    "member": "cdk-atomtype-2.11-sources.jar",
+    "url": "https://repo1.maven.org/maven2/org/openscience/cdk/cdk-atomtype/2.11/cdk-atomtype-2.11-sources.jar",
+    "size_bytes": 24961,
+    "sha256": "df35cee62c4fba55bff2a4489317534d4b7ca0370d2c9372b0736948293f21a0",
+    "for_jars": [
+      "bin/lib/cdk-atomtype-2.11.jar"
+    ]
+  },
+  {
+    "member": "cdk-charges-2.11-sources.jar",
+    "url": "https://repo1.maven.org/maven2/org/openscience/cdk/cdk-charges/2.11/cdk-charges-2.11-sources.jar",
+    "size_bytes": 29259,
+    "sha256": "44014b57b51dd36d8b43644ce097c4d180c9c2659c586d83fd70a7a6113c6e16",
+    "for_jars": [
+      "bin/lib/cdk-charges-2.11.jar"
+    ]
+  },
+  {
+    "member": "cdk-core-2.11-sources.jar",
+    "url": "https://repo1.maven.org/maven2/org/openscience/cdk/cdk-core/2.11/cdk-core-2.11-sources.jar",
+    "size_bytes": 271925,
+    "sha256": "4d30c22289707e8ad96defd5a463781c51f0126562b261d8cdaebefb84f4063c",
+    "for_jars": [
+      "bin/lib/cdk-core-2.11.jar"
+    ]
+  },
+  {
+    "member": "cdk-ctab-2.11-sources.jar",
+    "url": "https://repo1.maven.org/maven2/org/openscience/cdk/cdk-ctab/2.11/cdk-ctab-2.11-sources.jar",
+    "size_bytes": 118916,
+    "sha256": "7cad1059840e0825f4df653fffcaf5ebbcb3ca30cd7f471ce6a382be428be915",
+    "for_jars": [
+      "bin/lib/cdk-ctab-2.11.jar"
+    ]
+  },
+  {
+    "member": "cdk-dict-2.11-sources.jar",
+    "url": "https://repo1.maven.org/maven2/org/openscience/cdk/cdk-dict/2.11/cdk-dict-2.11-sources.jar",
+    "size_bytes": 36999,
+    "sha256": "a7ca85de06f8d263878ea8d27d6ace2eaa274ce61f9c1e26bbf228c31b80daa9",
+    "for_jars": [
+      "bin/lib/cdk-dict-2.11.jar"
+    ]
+  },
+  {
+    "member": "cdk-fingerprint-2.11-sources.jar",
+    "url": "https://repo1.maven.org/maven2/org/openscience/cdk/cdk-fingerprint/2.11/cdk-fingerprint-2.11-sources.jar",
+    "size_bytes": 106700,
+    "sha256": "97048dad9761f2e2877cc466586bf795ac9a8c724a53acc92aae2c1b75168405",
+    "for_jars": [
+      "bin/lib/cdk-fingerprint-2.11.jar"
+    ]
+  },
+  {
+    "member": "cdk-formula-2.11-sources.jar",
+    "url": "https://repo1.maven.org/maven2/org/openscience/cdk/cdk-formula/2.11/cdk-formula-2.11-sources.jar",
+    "size_bytes": 65295,
+    "sha256": "25a6ad5206490559e50cedbd5317f80a9702a9bde0d9ba5bbaf786feef5eb118",
+    "for_jars": [
+      "bin/lib/cdk-formula-2.11.jar"
+    ]
+  },
+  {
+    "member": "cdk-fragment-2.11-sources.jar",
+    "url": "https://repo1.maven.org/maven2/org/openscience/cdk/cdk-fragment/2.11/cdk-fragment-2.11-sources.jar",
+    "size_bytes": 24528,
+    "sha256": "226f04f680410a1db57e49511238b64a67c78750f933c14e154def90e7ac384d",
+    "for_jars": [
+      "bin/lib/cdk-fragment-2.11.jar"
+    ]
+  },
+  {
+    "member": "cdk-hash-2.11-sources.jar",
+    "url": "https://repo1.maven.org/maven2/org/openscience/cdk/cdk-hash/2.11/cdk-hash-2.11-sources.jar",
+    "size_bytes": 72431,
+    "sha256": "5172881381a54223ec20b64446177de85728920cd442d2424c62cf57331d9663",
+    "for_jars": [
+      "bin/lib/cdk-hash-2.11.jar"
+    ]
+  },
+  {
+    "member": "cdk-interfaces-2.11-sources.jar",
+    "url": "https://repo1.maven.org/maven2/org/openscience/cdk/cdk-interfaces/2.11/cdk-interfaces-2.11-sources.jar",
+    "size_bytes": 135879,
+    "sha256": "11117af94d658e07a36138eb0d8ff9f93b7ae480245a560e8152ebc963fe778f",
+    "for_jars": [
+      "bin/lib/cdk-interfaces-2.11.jar"
+    ]
+  },
+  {
+    "member": "cdk-ioformats-2.11-sources.jar",
+    "url": "https://repo1.maven.org/maven2/org/openscience/cdk/cdk-ioformats/2.11/cdk-ioformats-2.11-sources.jar",
+    "size_bytes": 123179,
+    "sha256": "20e31eca51bdf8764c3bb599e36461785a449b7036d0d4cee10f00481ba5ef87",
+    "for_jars": [
+      "bin/lib/cdk-ioformats-2.11.jar"
+    ]
+  },
+  {
+    "member": "cdk-isomorphism-2.11-sources.jar",
+    "url": "https://repo1.maven.org/maven2/org/openscience/cdk/cdk-isomorphism/2.11/cdk-isomorphism-2.11-sources.jar",
+    "size_bytes": 120320,
+    "sha256": "144ae5e41deb204c6e7a46d4a7b92525a3e0b4e23e3c59cfd8ca1de125963d9a",
+    "for_jars": [
+      "bin/lib/cdk-isomorphism-2.11.jar"
+    ]
+  },
+  {
+    "member": "cdk-qsar-2.11-sources.jar",
+    "url": "https://repo1.maven.org/maven2/org/openscience/cdk/cdk-qsar/2.11/cdk-qsar-2.11-sources.jar",
+    "size_bytes": 45913,
+    "sha256": "bdea418a69f7437d5e48661d2f5dd9f18e0b2f1b265c8c0c2e76eaf594f1b595",
+    "for_jars": [
+      "bin/lib/cdk-qsar-2.11.jar"
+    ]
+  },
+  {
+    "member": "cdk-qsarmolecular-2.11-sources.jar",
+    "url": "https://repo1.maven.org/maven2/org/openscience/cdk/cdk-qsarmolecular/2.11/cdk-qsarmolecular-2.11-sources.jar",
+    "size_bytes": 208951,
+    "sha256": "e9059411497c043489676d155c234577049891bab3cfb2149dec37975ec7ce7d",
+    "for_jars": [
+      "bin/lib/cdk-qsarmolecular-2.11.jar"
+    ]
+  },
+  {
+    "member": "cdk-reaction-2.11-sources.jar",
+    "url": "https://repo1.maven.org/maven2/org/openscience/cdk/cdk-reaction/2.11/cdk-reaction-2.11-sources.jar",
+    "size_bytes": 134517,
+    "sha256": "2d5f58c762d707b18eabff90fb4717cfed72ba6fa01b1cd1736df9f723c74c94",
+    "for_jars": [
+      "bin/lib/cdk-reaction-2.11.jar"
+    ]
+  },
+  {
+    "member": "cdk-silent-2.11-sources.jar",
+    "url": "https://repo1.maven.org/maven2/org/openscience/cdk/cdk-silent/2.11/cdk-silent-2.11-sources.jar",
+    "size_bytes": 109552,
+    "sha256": "8ae371ca1144bb77d866f3f81b0e52632f374fe15423c234125cf1b0decfaec3",
+    "for_jars": [
+      "bin/lib/cdk-silent-2.11.jar"
+    ]
+  },
+  {
+    "member": "cdk-smarts-2.11-sources.jar",
+    "url": "https://repo1.maven.org/maven2/org/openscience/cdk/cdk-smarts/2.11/cdk-smarts-2.11-sources.jar",
+    "size_bytes": 55393,
+    "sha256": "e5d68c5d4295d3516c7192566083c11b874108ec6506091462f95874d2808521",
+    "for_jars": [
+      "bin/lib/cdk-smarts-2.11.jar"
+    ]
+  },
+  {
+    "member": "cdk-smiles-2.11-sources.jar",
+    "url": "https://repo1.maven.org/maven2/org/openscience/cdk/cdk-smiles/2.11/cdk-smiles-2.11-sources.jar",
+    "size_bytes": 60793,
+    "sha256": "26ba1602144a79b995ef7785f62b16b23fb747fa9b82d0c19f3685753709fdfc",
+    "for_jars": [
+      "bin/lib/cdk-smiles-2.11.jar"
+    ]
+  },
+  {
+    "member": "cdk-standard-2.11-sources.jar",
+    "url": "https://repo1.maven.org/maven2/org/openscience/cdk/cdk-standard/2.11/cdk-standard-2.11-sources.jar",
+    "size_bytes": 299611,
+    "sha256": "e6339e4f4e43d7579775b7fa11be83335abfe56159bb6192835b8164aeb36a1d",
+    "for_jars": [
+      "bin/lib/cdk-standard-2.11.jar"
+    ]
+  },
+  {
+    "member": "cdk-valencycheck-2.11-sources.jar",
+    "url": "https://repo1.maven.org/maven2/org/openscience/cdk/cdk-valencycheck/2.11/cdk-valencycheck-2.11-sources.jar",
+    "size_bytes": 23023,
+    "sha256": "ce561389464b6543bd522fd2c4ddb63ff3e111e451d29f46d1cc7f78f8eba3c0",
+    "for_jars": [
+      "bin/lib/cdk-valencycheck-2.11.jar"
+    ]
+  },
+  {
+    "member": "forester-1.039-sources.jar",
+    "url": "https://repo1.maven.org/maven2/org/biojava/thirdparty/forester/1.039/forester-1.039-sources.jar",
+    "size_bytes": 1073861,
+    "sha256": "03fe17695618ac9448947ea4cd96973194fec369d1156c9533dd220301d8e0a0",
+    "for_jars": [
+      "bin/lib/forester-1.039.jar"
+    ]
+  },
+  {
+    "member": "javax.annotation-api-1.3.2-sources.jar",
+    "url": "https://repo1.maven.org/maven2/javax/annotation/javax.annotation-api/1.3.2/javax.annotation-api-1.3.2-sources.jar",
+    "size_bytes": 42279,
+    "sha256": "128971e52e0d84a66e3b6e049dab8ad7b2c58b7e1ad37fa2debd3d40c2947b95",
+    "for_jars": [
+      "bin/lib/javax.annotation-api-1.3.2.jar"
+    ]
+  },
+  {
+    "member": "jclipboardhelper-0.1.0-sources.jar",
+    "url": "https://repo1.maven.org/maven2/com/github/fracpete/jclipboardhelper/0.1.0/jclipboardhelper-0.1.0-sources.jar",
+    "size_bytes": 8116,
+    "sha256": "16617399fb8675e2a70a794e4afe96462a7efe72586138b3f0240410b725ae0d",
+    "for_jars": [
+      "bin/lib/jclipboardhelper-0.1.0.jar"
+    ]
+  },
+  {
+    "member": "jfilechooser-bookmarks-0.1.6-sources.jar",
+    "url": "https://repo1.maven.org/maven2/com/github/fracpete/jfilechooser-bookmarks/0.1.6/jfilechooser-bookmarks-0.1.6-sources.jar",
+    "size_bytes": 34099,
+    "sha256": "f22022e131fb66d703ad2fbf7e062e4850c951227460d2ee2fe021ae7cf74a5c",
+    "for_jars": [
+      "bin/lib/jfilechooser-bookmarks-0.1.6.jar"
+    ]
+  },
+  {
+    "member": "jgrapht-core-1.4.0-sources.jar",
+    "url": "https://repo1.maven.org/maven2/org/jgrapht/jgrapht-core/1.4.0/jgrapht-core-1.4.0-sources.jar",
+    "size_bytes": 894621,
+    "sha256": "e409f940e3a01342c022d711fb175f6a61e8f4f8abb2b44226ea5422d23c763c",
+    "for_jars": [
+      "bin/lib/jgrapht-core-1.4.0.jar"
+    ]
+  },
+  {
+    "member": "jniloader-1.1-sources.jar",
+    "url": "https://repo1.maven.org/maven2/com/github/fommil/jniloader/1.1/jniloader-1.1-sources.jar",
+    "size_bytes": 4441,
+    "sha256": "f31f1d3d257c1c298bff289424283bb881ba372e451745d828c04d02df091cf2",
+    "for_jars": [
+      "bin/lib/jniloader-1.1.jar"
+    ]
+  },
+  {
+    "member": "mtj-1.0.4-sources.jar",
+    "url": "https://repo1.maven.org/maven2/com/googlecode/matrix-toolkits-java/mtj/1.0.4/mtj-1.0.4-sources.jar",
+    "size_bytes": 210588,
+    "sha256": "b98ddcdc67cdd3de751dabb31661f4c1adf6a97d52a2b9d447425362a5d791ac",
+    "for_jars": [
+      "bin/lib/mtj-1.0.4.jar"
+    ]
+  },
+  {
+    "member": "vecmath-1.5.2-sources.jar",
+    "url": "https://repo1.maven.org/maven2/javax/vecmath/vecmath/1.5.2/vecmath-1.5.2-sources.jar",
+    "size_bytes": 183220,
+    "sha256": "7bea4e97b737757c14bc346a45bb5e57a3f6ddd5c1bafe51e4d1eacd64347030",
+    "for_jars": [
+      "bin/lib/vecmath-1.5.2.jar"
+    ]
+  },
+  {
+    "member": "weka-dev-3.9.6-sources.jar",
+    "url": "https://repo1.maven.org/maven2/nz/ac/waikato/cms/weka/weka-dev/3.9.6/weka-dev-3.9.6-sources.jar",
+    "size_bytes": 7721859,
+    "sha256": "35ae9419c3060bfcebe386c95f57c9d1bef747c347e8767059fb44eb8c2e822d",
+    "for_jars": [
+      "bin/lib/weka-dev-3.9.6.jar"
+    ]
+  },
+  {
+    "member": "xom-1.3.9-sources.jar",
+    "url": "https://repo1.maven.org/maven2/xom/xom/1.3.9/xom-1.3.9-sources.jar",
+    "size_bytes": 312377,
+    "sha256": "21c54a2c66bbd73bd230b572bbd3552189b72fee34539284b1ad57d37c49c3d5",
+    "for_jars": [
+      "bin/lib/xom-1.3.9.jar"
+    ]
+  }
+]

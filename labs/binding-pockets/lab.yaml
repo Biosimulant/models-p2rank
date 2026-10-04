@@ -116,7 +116,7 @@ runtime:
   duration: 1.0
   communication_step: 1.0
   initial_inputs:
-    predict.structure_file: fixtures/7L13-protein.pdb
+    predict.mmcif_file: fixtures/7L13.cif
     predict.chains_json: '[]'
     predict.top_n: 3
   dependencies:

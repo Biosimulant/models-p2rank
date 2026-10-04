@@ -1,0 +1,536 @@
+[
+  {
+    "member": "THIRD_PARTY_NOTICES.md",
+    "repo_path": "labs/binding-pockets/THIRD_PARTY_NOTICES.md",
+    "size_bytes": 41136,
+    "sha256": "a37c2be7d31f15b7eb70f9a638a95db0cfaa9c732ecf3e6158d346836c22189f"
+  },
+  {
+    "member": "sources/P2RANK-LICENSE.txt",
+    "repo_path": "sources/P2RANK-LICENSE.txt",
+    "size_bytes": 1145,
+    "sha256": "c63014a403b53ff17ee1056f9c4bf49879fb1fbda08c3a4e52cac3a3d38ce675"
+  },
+  {
+    "member": "sources/license-audit.json",
+    "repo_path": "labs/binding-pockets/sources/license-audit.json",
+    "size_bytes": 294384,
+    "sha256": "dd186399e7ccd1941395c870ee0356f530588b34c30a7db15363ede70562e5ea"
+  },
+  {
+    "member": "sources/jar-inventory.json",
+    "repo_path": "labs/binding-pockets/sources/jar-inventory.json",
+    "size_bytes": 37252,
+    "sha256": "265bfb34cd2a54bd731525930b240ddd223aca59b288b4612733ef5621727b1c"
+  },
+  {
+    "member": "sources/runtime-members.json",
+    "repo_path": "labs/binding-pockets/sources/runtime-members.json",
+    "size_bytes": 23813,
+    "sha256": "13589f47d176e9dbfb1b50831d4f26212bc7fd65b9fd2b3abcc49bdfd485a00f"
+  },
+  {
+    "member": "sources/corresponding-sources-manifest.json",
+    "repo_path": "labs/binding-pockets/sources/corresponding-sources-manifest.json",
+    "size_bytes": 12261,
+    "sha256": "1b9f218d366715ebaf6544afa6e88ad16e730a635197c1d575f490c0989ddcf8"
+  },
+  {
+    "member": "reports/runtime-trim-verification.json",
+    "repo_path": "reports/runtime-trim-verification.json",
+    "size_bytes": 1837,
+    "sha256": "37b4da3cb16c985cce95e769c19f8e1a1e61d742939fed264d6e8888e140b4fd"
+  },
+  {
+    "member": "sources/jar-notices/FastRandomForest_0.99.jar/LICENSE.txt",
+    "repo_path": "labs/binding-pockets/sources/jar-notices/FastRandomForest_0.99.jar/LICENSE.txt",
+    "size_bytes": 18317,
+    "sha256": "e25eeab2cab18f1f4a6dee637ca4bdd12af73a16f429a15808f44990c457ea68"
+  },
+  {
+    "member": "sources/jar-notices/FastRandomForest_0.99_src.jar/src/LICENSE.txt",
+    "repo_path": "labs/binding-pockets/sources/jar-notices/FastRandomForest_0.99_src.jar/src/LICENSE.txt",
+    "size_bytes": 18317,
+    "sha256": "e25eeab2cab18f1f4a6dee637ca4bdd12af73a16f429a15808f44990c457ea68"
+  },
+  {
+    "member": "sources/jar-notices/FastRandomForest_0.99_src.jar/src__LICENSE.txt",
+    "repo_path": "labs/binding-pockets/sources/jar-notices/FastRandomForest_0.99_src.jar/src__LICENSE.txt",
+    "size_bytes": 18317,
+    "sha256": "e25eeab2cab18f1f4a6dee637ca4bdd12af73a16f429a15808f44990c457ea68"
+  },
+  {
+    "member": "sources/jar-notices/angus-activation-2.0.1.jar/META-INF/LICENSE.md",
+    "repo_path": "labs/binding-pockets/sources/jar-notices/angus-activation-2.0.1.jar/META-INF/LICENSE.md",
+    "size_bytes": 1638,
+    "sha256": "87eba02f8a415f1a25de6ca3ac6b5c77eb33f33f00ae5a5f9d6ee963147f7956"
+  },
+  {
+    "member": "sources/jar-notices/angus-activation-2.0.1.jar/META-INF/NOTICE.md",
+    "repo_path": "labs/binding-pockets/sources/jar-notices/angus-activation-2.0.1.jar/META-INF/NOTICE.md",
+    "size_bytes": 1385,
+    "sha256": "203414df1bdc467ff3d2c53e44ed7a7b9bcba90067bd2f3442b1d509a308b21e"
+  },
+  {
+    "member": "sources/jar-notices/angus-activation-2.0.1.jar/META-INF__LICENSE.md",
+    "repo_path": "labs/binding-pockets/sources/jar-notices/angus-activation-2.0.1.jar/META-INF__LICENSE.md",
+    "size_bytes": 1638,
+    "sha256": "87eba02f8a415f1a25de6ca3ac6b5c77eb33f33f00ae5a5f9d6ee963147f7956"
+  },
+  {
+    "member": "sources/jar-notices/angus-activation-2.0.1.jar/META-INF__NOTICE.md",
+    "repo_path": "labs/binding-pockets/sources/jar-notices/angus-activation-2.0.1.jar/META-INF__NOTICE.md",
+    "size_bytes": 1385,
+    "sha256": "203414df1bdc467ff3d2c53e44ed7a7b9bcba90067bd2f3442b1d509a308b21e"
+  },
+  {
+    "member": "sources/jar-notices/combinatoricslib3-3.4.0.jar/META-INF/LICENSE.txt",
+    "repo_path": "labs/binding-pockets/sources/jar-notices/combinatoricslib3-3.4.0.jar/META-INF/LICENSE.txt",
+    "size_bytes": 11343,
+    "sha256": "0f5d437bb00e205a2a3d8faf978bb889e0e76410992c974cc167d61f9ef63c7c"
+  },
+  {
+    "member": "sources/jar-notices/combinatoricslib3-3.4.0.jar/META-INF/NOTICE.txt",
+    "repo_path": "labs/binding-pockets/sources/jar-notices/combinatoricslib3-3.4.0.jar/META-INF/NOTICE.txt",
+    "size_bytes": 102,
+    "sha256": "c662f513d6b4e1c6b314617d258da07a0eef321ba45e865ef22b2bf628604bf1"
+  },
+  {
+    "member": "sources/jar-notices/combinatoricslib3-3.4.0.jar/META-INF__LICENSE.txt",
+    "repo_path": "labs/binding-pockets/sources/jar-notices/combinatoricslib3-3.4.0.jar/META-INF__LICENSE.txt",
+    "size_bytes": 11343,
+    "sha256": "0f5d437bb00e205a2a3d8faf978bb889e0e76410992c974cc167d61f9ef63c7c"
+  },
+  {
+    "member": "sources/jar-notices/combinatoricslib3-3.4.0.jar/META-INF__NOTICE.txt",
+    "repo_path": "labs/binding-pockets/sources/jar-notices/combinatoricslib3-3.4.0.jar/META-INF__NOTICE.txt",
+    "size_bytes": 102,
+    "sha256": "c662f513d6b4e1c6b314617d258da07a0eef321ba45e865ef22b2bf628604bf1"
+  },
+  {
+    "member": "sources/jar-notices/commons-codec-1.19.0.jar/META-INF/LICENSE.txt",
+    "repo_path": "labs/binding-pockets/sources/jar-notices/commons-codec-1.19.0.jar/META-INF/LICENSE.txt",
+    "size_bytes": 11359,
+    "sha256": "b1d2870f1a00e4d7f56576e5f0870cba109e041f8af66866cf5b499478e654e7"
+  },
+  {
+    "member": "sources/jar-notices/commons-codec-1.19.0.jar/META-INF/NOTICE.txt",
+    "repo_path": "labs/binding-pockets/sources/jar-notices/commons-codec-1.19.0.jar/META-INF/NOTICE.txt",
+    "size_bytes": 175,
+    "sha256": "b64933ee1d36d14659156223a2604edadb60bffdd465d5368ff422d7689db5fb"
+  },
+  {
+    "member": "sources/jar-notices/commons-codec-1.19.0.jar/META-INF__LICENSE.txt",
+    "repo_path": "labs/binding-pockets/sources/jar-notices/commons-codec-1.19.0.jar/META-INF__LICENSE.txt",
+    "size_bytes": 11359,
+    "sha256": "b1d2870f1a00e4d7f56576e5f0870cba109e041f8af66866cf5b499478e654e7"
+  },
+  {
+    "member": "sources/jar-notices/commons-codec-1.19.0.jar/META-INF__NOTICE.txt",
+    "repo_path": "labs/binding-pockets/sources/jar-notices/commons-codec-1.19.0.jar/META-INF__NOTICE.txt",
+    "size_bytes": 175,
+    "sha256": "b64933ee1d36d14659156223a2604edadb60bffdd465d5368ff422d7689db5fb"
+  },
+  {
+    "member": "sources/jar-notices/commons-compress-1.28.0.jar/META-INF/LICENSE.txt",
+    "repo_path": "labs/binding-pockets/sources/jar-notices/commons-compress-1.28.0.jar/META-INF/LICENSE.txt",
+    "size_bytes": 11358,
+    "sha256": "51b88fd3e9e24edcdce1dd145a4fca2dcd12911407f00b06dfa6ff600f9733c1"
+  },
+  {
+    "member": "sources/jar-notices/commons-compress-1.28.0.jar/META-INF/NOTICE.txt",
+    "repo_path": "labs/binding-pockets/sources/jar-notices/commons-compress-1.28.0.jar/META-INF/NOTICE.txt",
+    "size_bytes": 178,
+    "sha256": "0d98967f0ab328af8d9d536aa9a5c684b5dd665657245f6ee6b5915affe811c0"
+  },
+  {
+    "member": "sources/jar-notices/commons-compress-1.28.0.jar/META-INF__LICENSE.txt",
+    "repo_path": "labs/binding-pockets/sources/jar-notices/commons-compress-1.28.0.jar/META-INF__LICENSE.txt",
+    "size_bytes": 11358,
+    "sha256": "51b88fd3e9e24edcdce1dd145a4fca2dcd12911407f00b06dfa6ff600f9733c1"
+  },
+  {
+    "member": "sources/jar-notices/commons-compress-1.28.0.jar/META-INF__NOTICE.txt",
+    "repo_path": "labs/binding-pockets/sources/jar-notices/commons-compress-1.28.0.jar/META-INF__NOTICE.txt",
+    "size_bytes": 178,
+    "sha256": "0d98967f0ab328af8d9d536aa9a5c684b5dd665657245f6ee6b5915affe811c0"
+  },
+  {
+    "member": "sources/jar-notices/commons-csv-1.14.1.jar/META-INF/LICENSE.txt",
+    "repo_path": "labs/binding-pockets/sources/jar-notices/commons-csv-1.14.1.jar/META-INF/LICENSE.txt",
+    "size_bytes": 11359,
+    "sha256": "b1d2870f1a00e4d7f56576e5f0870cba109e041f8af66866cf5b499478e654e7"
+  },
+  {
+    "member": "sources/jar-notices/commons-csv-1.14.1.jar/META-INF/NOTICE.txt",
+    "repo_path": "labs/binding-pockets/sources/jar-notices/commons-csv-1.14.1.jar/META-INF/NOTICE.txt",
+    "size_bytes": 173,
+    "sha256": "a9118eadc1011eb8358bb0bb76b5eca09b3adcdc70e93ea958d531e55e45bc91"
+  },
+  {
+    "member": "sources/jar-notices/commons-csv-1.14.1.jar/META-INF__LICENSE.txt",
+    "repo_path": "labs/binding-pockets/sources/jar-notices/commons-csv-1.14.1.jar/META-INF__LICENSE.txt",
+    "size_bytes": 11359,
+    "sha256": "b1d2870f1a00e4d7f56576e5f0870cba109e041f8af66866cf5b499478e654e7"
+  },
+  {
+    "member": "sources/jar-notices/commons-csv-1.14.1.jar/META-INF__NOTICE.txt",
+    "repo_path": "labs/binding-pockets/sources/jar-notices/commons-csv-1.14.1.jar/META-INF__NOTICE.txt",
+    "size_bytes": 173,
+    "sha256": "a9118eadc1011eb8358bb0bb76b5eca09b3adcdc70e93ea958d531e55e45bc91"
+  },
+  {
+    "member": "sources/jar-notices/commons-io-2.20.0.jar/META-INF/LICENSE.txt",
+    "repo_path": "labs/binding-pockets/sources/jar-notices/commons-io-2.20.0.jar/META-INF/LICENSE.txt",
+    "size_bytes": 11360,
+    "sha256": "c1d1a38c99c48ccad170890ade6066e2e240bb6ce59861d4eb7f672eddd2a4c6"
+  },
+  {
+    "member": "sources/jar-notices/commons-io-2.20.0.jar/META-INF/NOTICE.txt",
+    "repo_path": "labs/binding-pockets/sources/jar-notices/commons-io-2.20.0.jar/META-INF/NOTICE.txt",
+    "size_bytes": 172,
+    "sha256": "b54b0db6c617273efff79ba193bb01b05eadcddfff55c24063b38b2acef714c3"
+  },
+  {
+    "member": "sources/jar-notices/commons-io-2.20.0.jar/META-INF__LICENSE.txt",
+    "repo_path": "labs/binding-pockets/sources/jar-notices/commons-io-2.20.0.jar/META-INF__LICENSE.txt",
+    "size_bytes": 11360,
+    "sha256": "c1d1a38c99c48ccad170890ade6066e2e240bb6ce59861d4eb7f672eddd2a4c6"
+  },
+  {
+    "member": "sources/jar-notices/commons-io-2.20.0.jar/META-INF__NOTICE.txt",
+    "repo_path": "labs/binding-pockets/sources/jar-notices/commons-io-2.20.0.jar/META-INF__NOTICE.txt",
+    "size_bytes": 172,
+    "sha256": "b54b0db6c617273efff79ba193bb01b05eadcddfff55c24063b38b2acef714c3"
+  },
+  {
+    "member": "sources/jar-notices/commons-lang-2.4.jar/META-INF/LICENSE.txt",
+    "repo_path": "labs/binding-pockets/sources/jar-notices/commons-lang-2.4.jar/META-INF/LICENSE.txt",
+    "size_bytes": 11358,
+    "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+  },
+  {
+    "member": "sources/jar-notices/commons-lang-2.4.jar/META-INF/NOTICE.txt",
+    "repo_path": "labs/binding-pockets/sources/jar-notices/commons-lang-2.4.jar/META-INF/NOTICE.txt",
+    "size_bytes": 173,
+    "sha256": "10b9c95e267d7945c97f70859b554234c803b6749a598feb52a1cdae46061e9b"
+  },
+  {
+    "member": "sources/jar-notices/commons-lang-2.4.jar/META-INF__LICENSE.txt",
+    "repo_path": "labs/binding-pockets/sources/jar-notices/commons-lang-2.4.jar/META-INF__LICENSE.txt",
+    "size_bytes": 11358,
+    "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+  },
+  {
+    "member": "sources/jar-notices/commons-lang-2.4.jar/META-INF__NOTICE.txt",
+    "repo_path": "labs/binding-pockets/sources/jar-notices/commons-lang-2.4.jar/META-INF__NOTICE.txt",
+    "size_bytes": 173,
+    "sha256": "10b9c95e267d7945c97f70859b554234c803b6749a598feb52a1cdae46061e9b"
+  },
+  {
+    "member": "sources/jar-notices/commons-lang3-3.18.0.jar/META-INF/LICENSE.txt",
+    "repo_path": "labs/binding-pockets/sources/jar-notices/commons-lang3-3.18.0.jar/META-INF/LICENSE.txt",
+    "size_bytes": 11359,
+    "sha256": "b1d2870f1a00e4d7f56576e5f0870cba109e041f8af66866cf5b499478e654e7"
+  },
+  {
+    "member": "sources/jar-notices/commons-lang3-3.18.0.jar/META-INF/NOTICE.txt",
+    "repo_path": "labs/binding-pockets/sources/jar-notices/commons-lang3-3.18.0.jar/META-INF/NOTICE.txt",
+    "size_bytes": 174,
+    "sha256": "64bc8696af3f6c770521412b85d3a733fa44b2ef5b0f4bd739e0c4d02eca492a"
+  },
+  {
+    "member": "sources/jar-notices/commons-lang3-3.18.0.jar/META-INF__LICENSE.txt",
+    "repo_path": "labs/binding-pockets/sources/jar-notices/commons-lang3-3.18.0.jar/META-INF__LICENSE.txt",
+    "size_bytes": 11359,
+    "sha256": "b1d2870f1a00e4d7f56576e5f0870cba109e041f8af66866cf5b499478e654e7"
+  },
+  {
+    "member": "sources/jar-notices/commons-lang3-3.18.0.jar/META-INF__NOTICE.txt",
+    "repo_path": "labs/binding-pockets/sources/jar-notices/commons-lang3-3.18.0.jar/META-INF__NOTICE.txt",
+    "size_bytes": 174,
+    "sha256": "64bc8696af3f6c770521412b85d3a733fa44b2ef5b0f4bd739e0c4d02eca492a"
+  },
+  {
+    "member": "sources/jar-notices/commons-math3-3.6.1.jar/META-INF/LICENSE.txt",
+    "repo_path": "labs/binding-pockets/sources/jar-notices/commons-math3-3.6.1.jar/META-INF/LICENSE.txt",
+    "size_bytes": 24038,
+    "sha256": "64f23963615950bad9ddd31569a7f09afbbe11b81d94873ffd9b1cac6081a11d"
+  },
+  {
+    "member": "sources/jar-notices/commons-math3-3.6.1.jar/META-INF/NOTICE.txt",
+    "repo_path": "labs/binding-pockets/sources/jar-notices/commons-math3-3.6.1.jar/META-INF/NOTICE.txt",
+    "size_bytes": 324,
+    "sha256": "5495442a32bfc2b93b4a8f2c34c5c218d16cca434aa5684fb953d9419120e3fa"
+  },
+  {
+    "member": "sources/jar-notices/commons-math3-3.6.1.jar/META-INF__LICENSE.txt",
+    "repo_path": "labs/binding-pockets/sources/jar-notices/commons-math3-3.6.1.jar/META-INF__LICENSE.txt",
+    "size_bytes": 24038,
+    "sha256": "64f23963615950bad9ddd31569a7f09afbbe11b81d94873ffd9b1cac6081a11d"
+  },
+  {
+    "member": "sources/jar-notices/commons-math3-3.6.1.jar/META-INF__NOTICE.txt",
+    "repo_path": "labs/binding-pockets/sources/jar-notices/commons-math3-3.6.1.jar/META-INF__NOTICE.txt",
+    "size_bytes": 324,
+    "sha256": "5495442a32bfc2b93b4a8f2c34c5c218d16cca434aa5684fb953d9419120e3fa"
+  },
+  {
+    "member": "sources/jar-notices/failureaccess-1.0.3.jar/META-INF/LICENSE",
+    "repo_path": "labs/binding-pockets/sources/jar-notices/failureaccess-1.0.3.jar/META-INF/LICENSE",
+    "size_bytes": 11358,
+    "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+  },
+  {
+    "member": "sources/jar-notices/failureaccess-1.0.3.jar/META-INF__LICENSE",
+    "repo_path": "labs/binding-pockets/sources/jar-notices/failureaccess-1.0.3.jar/META-INF__LICENSE",
+    "size_bytes": 11358,
+    "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+  },
+  {
+    "member": "sources/jar-notices/flatlaf-2.0.jar/META-INF/LICENSE",
+    "repo_path": "labs/binding-pockets/sources/jar-notices/flatlaf-2.0.jar/META-INF/LICENSE",
+    "size_bytes": 11357,
+    "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+  },
+  {
+    "member": "sources/jar-notices/flatlaf-2.0.jar/META-INF__LICENSE",
+    "repo_path": "labs/binding-pockets/sources/jar-notices/flatlaf-2.0.jar/META-INF__LICENSE",
+    "size_bytes": 11357,
+    "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+  },
+  {
+    "member": "sources/jar-notices/gpars-1.2.1.jar/META-INF/LICENSE.txt",
+    "repo_path": "labs/binding-pockets/sources/jar-notices/gpars-1.2.1.jar/META-INF/LICENSE.txt",
+    "size_bytes": 844,
+    "sha256": "289d0822e4db534607b5006b8b5f5052f1990d54012ca232247cd02884302c2a"
+  },
+  {
+    "member": "sources/jar-notices/gpars-1.2.1.jar/META-INF/LICENSE_JUnit.txt",
+    "repo_path": "labs/binding-pockets/sources/jar-notices/gpars-1.2.1.jar/META-INF/LICENSE_JUnit.txt",
+    "size_bytes": 1509,
+    "sha256": "1cde867cab5c8e842929da5391cef98b4017314822270e934e8e2eef3767c666"
+  },
+  {
+    "member": "sources/jar-notices/gpars-1.2.1.jar/META-INF/NOTICE.txt",
+    "repo_path": "labs/binding-pockets/sources/jar-notices/gpars-1.2.1.jar/META-INF/NOTICE.txt",
+    "size_bytes": 1248,
+    "sha256": "e2acf777246d9e4ec0a3f0d73fe70cefd333cc8e73d3c4a00cd6eeed7c6ee910"
+  },
+  {
+    "member": "sources/jar-notices/gpars-1.2.1.jar/META-INF__LICENSE.txt",
+    "repo_path": "labs/binding-pockets/sources/jar-notices/gpars-1.2.1.jar/META-INF__LICENSE.txt",
+    "size_bytes": 844,
+    "sha256": "289d0822e4db534607b5006b8b5f5052f1990d54012ca232247cd02884302c2a"
+  },
+  {
+    "member": "sources/jar-notices/gpars-1.2.1.jar/META-INF__LICENSE_JUnit.txt",
+    "repo_path": "labs/binding-pockets/sources/jar-notices/gpars-1.2.1.jar/META-INF__LICENSE_JUnit.txt",
+    "size_bytes": 1509,
+    "sha256": "1cde867cab5c8e842929da5391cef98b4017314822270e934e8e2eef3767c666"
+  },
+  {
+    "member": "sources/jar-notices/gpars-1.2.1.jar/META-INF__NOTICE.txt",
+    "repo_path": "labs/binding-pockets/sources/jar-notices/gpars-1.2.1.jar/META-INF__NOTICE.txt",
+    "size_bytes": 1248,
+    "sha256": "e2acf777246d9e4ec0a3f0d73fe70cefd333cc8e73d3c4a00cd6eeed7c6ee910"
+  },
+  {
+    "member": "sources/jar-notices/groovy-4.0.28.jar/META-INF/LICENSE",
+    "repo_path": "labs/binding-pockets/sources/jar-notices/groovy-4.0.28.jar/META-INF/LICENSE",
+    "size_bytes": 11708,
+    "sha256": "0acb17d197627dc9a5e034f6471b2b6eefe15fc63c7cbb9e9d172cf99a9fa9a0"
+  },
+  {
+    "member": "sources/jar-notices/groovy-4.0.28.jar/META-INF/NOTICE",
+    "repo_path": "labs/binding-pockets/sources/jar-notices/groovy-4.0.28.jar/META-INF/NOTICE",
+    "size_bytes": 299,
+    "sha256": "d0072a0fa617c1f81ce8cc12aa63473fad36468c0a358cd9ef3127578499bd87"
+  },
+  {
+    "member": "sources/jar-notices/groovy-4.0.28.jar/META-INF/licenses",
+    "repo_path": "labs/binding-pockets/sources/jar-notices/groovy-4.0.28.jar/META-INF/licenses",
+    "size_bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "member": "sources/jar-notices/groovy-4.0.28.jar/META-INF__LICENSE",
+    "repo_path": "labs/binding-pockets/sources/jar-notices/groovy-4.0.28.jar/META-INF__LICENSE",
+    "size_bytes": 11708,
+    "sha256": "0acb17d197627dc9a5e034f6471b2b6eefe15fc63c7cbb9e9d172cf99a9fa9a0"
+  },
+  {
+    "member": "sources/jar-notices/groovy-4.0.28.jar/META-INF__NOTICE",
+    "repo_path": "labs/binding-pockets/sources/jar-notices/groovy-4.0.28.jar/META-INF__NOTICE",
+    "size_bytes": 299,
+    "sha256": "d0072a0fa617c1f81ce8cc12aa63473fad36468c0a358cd9ef3127578499bd87"
+  },
+  {
+    "member": "sources/jar-notices/groovy-4.0.28.jar/META-INF__licenses__antlr4-license.txt",
+    "repo_path": "labs/binding-pockets/sources/jar-notices/groovy-4.0.28.jar/META-INF__licenses__antlr4-license.txt",
+    "size_bytes": 1508,
+    "sha256": "84c213fbceee99041bb1632c4518be2aa7bafc7fb4202b1134acb3d00f575050"
+  },
+  {
+    "member": "sources/jar-notices/groovy-4.0.28.jar/META-INF__licenses__asm-license.txt",
+    "repo_path": "labs/binding-pockets/sources/jar-notices/groovy-4.0.28.jar/META-INF__licenses__asm-license.txt",
+    "size_bytes": 1588,
+    "sha256": "5d2b9e63c9cba7276c7c4d5dd99417dd6e778f5c6873d40916c4d97516ad859f"
+  },
+  {
+    "member": "sources/jar-notices/guava-33.4.8-jre.jar/META-INF__LICENSE",
+    "repo_path": "labs/binding-pockets/sources/jar-notices/guava-33.4.8-jre.jar/META-INF__LICENSE",
+    "size_bytes": 11358,
+    "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+  },
+  {
+    "member": "sources/jar-notices/jackson-annotations-2.13.4.jar/META-INF__LICENSE",
+    "repo_path": "labs/binding-pockets/sources/jar-notices/jackson-annotations-2.13.4.jar/META-INF__LICENSE",
+    "size_bytes": 11358,
+    "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+  },
+  {
+    "member": "sources/jar-notices/jackson-core-2.13.4.jar/META-INF__LICENSE",
+    "repo_path": "labs/binding-pockets/sources/jar-notices/jackson-core-2.13.4.jar/META-INF__LICENSE",
+    "size_bytes": 11358,
+    "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+  },
+  {
+    "member": "sources/jar-notices/jackson-core-2.13.4.jar/META-INF__NOTICE",
+    "repo_path": "labs/binding-pockets/sources/jar-notices/jackson-core-2.13.4.jar/META-INF__NOTICE",
+    "size_bytes": 667,
+    "sha256": "e1e98bd0b4c0b313defed877c4e438fd57dfa26eecfd9ea7b7634a5ffa85ff19"
+  },
+  {
+    "member": "sources/jar-notices/jackson-databind-2.13.4.2.jar/META-INF__LICENSE",
+    "repo_path": "labs/binding-pockets/sources/jar-notices/jackson-databind-2.13.4.2.jar/META-INF__LICENSE",
+    "size_bytes": 11358,
+    "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+  },
+  {
+    "member": "sources/jar-notices/jackson-databind-2.13.4.2.jar/META-INF__NOTICE",
+    "repo_path": "labs/binding-pockets/sources/jar-notices/jackson-databind-2.13.4.2.jar/META-INF__NOTICE",
+    "size_bytes": 667,
+    "sha256": "e1e98bd0b4c0b313defed877c4e438fd57dfa26eecfd9ea7b7634a5ffa85ff19"
+  },
+  {
+    "member": "sources/jar-notices/jakarta.activation-api-2.1.2.jar/META-INF__LICENSE.md",
+    "repo_path": "labs/binding-pockets/sources/jar-notices/jakarta.activation-api-2.1.2.jar/META-INF__LICENSE.md",
+    "size_bytes": 1638,
+    "sha256": "87eba02f8a415f1a25de6ca3ac6b5c77eb33f33f00ae5a5f9d6ee963147f7956"
+  },
+  {
+    "member": "sources/jar-notices/jakarta.activation-api-2.1.2.jar/META-INF__NOTICE.md",
+    "repo_path": "labs/binding-pockets/sources/jar-notices/jakarta.activation-api-2.1.2.jar/META-INF__NOTICE.md",
+    "size_bytes": 2737,
+    "sha256": "9d80664e28e61982d66ea3f65474597088d71b76b4259f139bb44a7a184c26f2"
+  },
+  {
+    "member": "sources/jar-notices/jakarta.xml.bind-api-4.0.0.jar/META-INF__LICENSE.md",
+    "repo_path": "labs/binding-pockets/sources/jar-notices/jakarta.xml.bind-api-4.0.0.jar/META-INF__LICENSE.md",
+    "size_bytes": 1644,
+    "sha256": "dcbbdbb512a272b5f1e01e82225a23eba92406ec28f7b36e490057478d8d1570"
+  },
+  {
+    "member": "sources/jar-notices/jakarta.xml.bind-api-4.0.0.jar/META-INF__NOTICE.md",
+    "repo_path": "labs/binding-pockets/sources/jar-notices/jakarta.xml.bind-api-4.0.0.jar/META-INF__NOTICE.md",
+    "size_bytes": 2346,
+    "sha256": "afa37a1aabf1d2f6e37ccc0336d591770425d20ab9a1017efa905138d64a9871"
+  },
+  {
+    "member": "sources/jar-notices/javax.annotation-api-1.3.2.jar/META-INF__LICENSE.txt",
+    "repo_path": "labs/binding-pockets/sources/jar-notices/javax.annotation-api-1.3.2.jar/META-INF__LICENSE.txt",
+    "size_bytes": 36116,
+    "sha256": "a4c80869daf4350b6773bd5e6ee1d0a6cc52b63db3a3d2dc20961b0cdd272a5c"
+  },
+  {
+    "member": "sources/jar-notices/jaxb-core-4.0.3.jar/META-INF__LICENSE.md",
+    "repo_path": "labs/binding-pockets/sources/jar-notices/jaxb-core-4.0.3.jar/META-INF__LICENSE.md",
+    "size_bytes": 1529,
+    "sha256": "c56e52168c596cb8ca8dca3a648886f19924461928eb8102f5eb31710aee9e31"
+  },
+  {
+    "member": "sources/jar-notices/jaxb-core-4.0.3.jar/META-INF__NOTICE.md",
+    "repo_path": "labs/binding-pockets/sources/jar-notices/jaxb-core-4.0.3.jar/META-INF__NOTICE.md",
+    "size_bytes": 4630,
+    "sha256": "757d97415f437b8e48ee96694425bbcf25330a2b355348272494fdf57950391a"
+  },
+  {
+    "member": "sources/jar-notices/jaxb-runtime-4.0.3.jar/META-INF__LICENSE.md",
+    "repo_path": "labs/binding-pockets/sources/jar-notices/jaxb-runtime-4.0.3.jar/META-INF__LICENSE.md",
+    "size_bytes": 1529,
+    "sha256": "c56e52168c596cb8ca8dca3a648886f19924461928eb8102f5eb31710aee9e31"
+  },
+  {
+    "member": "sources/jar-notices/jaxb-runtime-4.0.3.jar/META-INF__NOTICE.md",
+    "repo_path": "labs/binding-pockets/sources/jar-notices/jaxb-runtime-4.0.3.jar/META-INF__NOTICE.md",
+    "size_bytes": 4630,
+    "sha256": "757d97415f437b8e48ee96694425bbcf25330a2b355348272494fdf57950391a"
+  },
+  {
+    "member": "sources/jar-notices/jul-to-slf4j-2.0.17.jar/META-INF__LICENSE.txt",
+    "repo_path": "labs/binding-pockets/sources/jar-notices/jul-to-slf4j-2.0.17.jar/META-INF__LICENSE.txt",
+    "size_bytes": 1178,
+    "sha256": "4e7f90c86ab51278228bce153122f1d8df30149d13ce9ef524c8444a84c32dcc"
+  },
+  {
+    "member": "sources/jar-notices/log4j-api-2.24.0.jar/META-INF__LICENSE",
+    "repo_path": "labs/binding-pockets/sources/jar-notices/log4j-api-2.24.0.jar/META-INF__LICENSE",
+    "size_bytes": 11358,
+    "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+  },
+  {
+    "member": "sources/jar-notices/log4j-api-2.24.0.jar/META-INF__NOTICE",
+    "repo_path": "labs/binding-pockets/sources/jar-notices/log4j-api-2.24.0.jar/META-INF__NOTICE",
+    "size_bytes": 171,
+    "sha256": "6d95ce9a738c31425a584ee91eb6d9b6fbe18e351fb206b9f79104bcf7d7bf15"
+  },
+  {
+    "member": "sources/jar-notices/log4j-core-2.24.0.jar/META-INF__LICENSE",
+    "repo_path": "labs/binding-pockets/sources/jar-notices/log4j-core-2.24.0.jar/META-INF__LICENSE",
+    "size_bytes": 11366,
+    "sha256": "e118ad8e5f2d3c71f0e7d6202d5829e7580ccd9e3609a546c692788e657afbe2"
+  },
+  {
+    "member": "sources/jar-notices/log4j-core-2.24.0.jar/META-INF__NOTICE",
+    "repo_path": "labs/binding-pockets/sources/jar-notices/log4j-core-2.24.0.jar/META-INF__NOTICE",
+    "size_bytes": 217,
+    "sha256": "47481ebb980fb2d78204a80da2ccdb897c41aa34f43e0e5bcc06c1a32ea9ff48"
+  },
+  {
+    "member": "sources/jar-notices/log4j-slf4j2-impl-2.24.0.jar/META-INF__LICENSE",
+    "repo_path": "labs/binding-pockets/sources/jar-notices/log4j-slf4j2-impl-2.24.0.jar/META-INF__LICENSE",
+    "size_bytes": 11358,
+    "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+  },
+  {
+    "member": "sources/jar-notices/log4j-slf4j2-impl-2.24.0.jar/META-INF__NOTICE",
+    "repo_path": "labs/binding-pockets/sources/jar-notices/log4j-slf4j2-impl-2.24.0.jar/META-INF__NOTICE",
+    "size_bytes": 185,
+    "sha256": "67dfa17bcccc3c157fb8aa88e9a9d49e872c85671dde9db9261e93a7dc6d4771"
+  },
+  {
+    "member": "sources/jar-notices/openchart-1.4.2.jar/LICENSE",
+    "repo_path": "labs/binding-pockets/sources/jar-notices/openchart-1.4.2.jar/LICENSE",
+    "size_bytes": 24808,
+    "sha256": "1abd7750c0901885574133502fc5c576170310a545f224dd703d2e85be500b62"
+  },
+  {
+    "member": "sources/jar-notices/slf4j-api-2.0.17.jar/META-INF__LICENSE.txt",
+    "repo_path": "labs/binding-pockets/sources/jar-notices/slf4j-api-2.0.17.jar/META-INF__LICENSE.txt",
+    "size_bytes": 1178,
+    "sha256": "4e7f90c86ab51278228bce153122f1d8df30149d13ce9ef524c8444a84c32dcc"
+  },
+  {
+    "member": "sources/jar-notices/txw2-4.0.3.jar/META-INF__LICENSE.md",
+    "repo_path": "labs/binding-pockets/sources/jar-notices/txw2-4.0.3.jar/META-INF__LICENSE.md",
+    "size_bytes": 1529,
+    "sha256": "c56e52168c596cb8ca8dca3a648886f19924461928eb8102f5eb31710aee9e31"
+  },
+  {
+    "member": "sources/jar-notices/txw2-4.0.3.jar/META-INF__NOTICE.md",
+    "repo_path": "labs/binding-pockets/sources/jar-notices/txw2-4.0.3.jar/META-INF__NOTICE.md",
+    "size_bytes": 4630,
+    "sha256": "757d97415f437b8e48ee96694425bbcf25330a2b355348272494fdf57950391a"
+  }
+]

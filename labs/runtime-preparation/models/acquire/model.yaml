@@ -1,8 +1,9 @@
 schema_version: '2.0'
 package: p2rank-runtime-acquire
-version: 0.1.0
+version: 0.2.0
 title: P2Rank Runtime Acquisition
-description: Private one-time checksum-pinned P2Rank 2.5.1 runtime chunk preparation.
+description: Private one-time checksum-pinned P2Rank 2.5.1 runtime, 3Dmol.js and RCSB
+  fixture preparation.
 standard: other
 license: MIT
 biosim:
@@ -31,7 +32,33 @@ io:
       members_verified: int
       chunks: json
       all_chunks_match: bool
+      assets: json
     emitted_unit: '1'
+  - name: viewer_js
+    signal_type: scalar
+    dtype: str
+    value_type: file
+    format: js
+  - name: viewer_license
+    signal_type: scalar
+    dtype: str
+    value_type: file
+    format: txt
+  - name: structure_1crn
+    signal_type: scalar
+    dtype: str
+    value_type: file
+    format: cif
+  - name: structure_1stp
+    signal_type: scalar
+    dtype: str
+    value_type: file
+    format: cif
+  - name: structure_7l13
+    signal_type: scalar
+    dtype: str
+    value_type: file
+    format: cif
 runtime:
   python_version: '3.12'
   dependencies:

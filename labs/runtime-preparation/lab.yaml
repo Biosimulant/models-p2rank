@@ -1,8 +1,9 @@
 schema_version: '2.0'
 package: p2rank-runtime-preparation
-version: 0.1.0
+version: 0.2.0
 title: P2Rank Runtime Preparation
-description: Private one-time pinned P2Rank 2.5.1 runtime asset acquisition; not pocket inference.
+description: Private one-time pinned P2Rank 2.5.1 runtime, 3Dmol.js and RCSB fixture
+  acquisition; not pocket inference.
 license: MIT
 models:
 - alias: acquire
@@ -21,6 +22,26 @@ io:
     format: zip
   - name: receipt
     maps_to: acquire.receipt
+  - name: viewer_js
+    maps_to: acquire.viewer_js
+    value_type: file
+    format: js
+  - name: viewer_license
+    maps_to: acquire.viewer_license
+    value_type: file
+    format: txt
+  - name: structure_1crn
+    maps_to: acquire.structure_1crn
+    value_type: file
+    format: cif
+  - name: structure_1stp
+    maps_to: acquire.structure_1stp
+    value_type: file
+    format: cif
+  - name: structure_7l13
+    maps_to: acquire.structure_7l13
+    value_type: file
+    format: cif
 runtime:
   python_version: '3.12'
   duration: 1
@@ -33,9 +54,11 @@ hardware:
     memory_mb: 4096
     recommended_profile: pro
 intended_use:
-  statement: Private acquisition of the checksum-pinned P2Rank 2.5.1 binary distribution; no scientific result.
+  statement: Private acquisition of the checksum-pinned P2Rank 2.5.1 binary distribution,
+    3Dmol.js 2.5.5 and RCSB reference structures; no scientific result.
 caveats:
-- Infrastructure-only preparation; downloads the exact public GitHub release archive once. Pocket inference must use retained artifacts offline.
+- Infrastructure-only preparation; downloads exact public GitHub, npm and RCSB files
+  once. Pocket inference must use retained artifacts offline.
 prohibited_claims:
 - Protein, pocket or biological inference from asset preparation
 visualization:

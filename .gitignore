@@ -5,6 +5,7 @@ __pycache__/
 sources/*.tar.gz
 sources/p2rank_2.5.1/
 outputs/
-labs/binding-pockets/assets/p2rank-runtime-*.zip
+labs/binding-pockets/assets/*.zip
 labs/*/outputs/
 *.pyc
+sources/corresponding-sources/

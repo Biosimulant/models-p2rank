@@ -14,6 +14,12 @@ DISTRIBUTION = REPO / 'sources/p2rank_2.5.1'
 sys.path.insert(0, str(LAB / 'models/predict'))
 
 
+def example_path(name):
+    """Bundled RCSB example as a real file (repository copy or pinned reference-structures.zip member)."""
+    from src.predictor import bundled_example
+    return bundled_example(Path('fixtures') / name)
+
+
 def read_csv(path):
     with Path(path).open(newline='') as f:
         reader = csv.DictReader(f)
@@ -38,7 +44,8 @@ def evidence():
     path = REPO / 'reports/local-acceptance-evidence.json'
     record = json.loads(path.read_text()) if path.exists() else {}
     yield record
-    path.write_text(json.dumps(record, indent=2, sort_keys=True) + '\n')
+    if path.parent.is_dir():  # repository evidence only; absent inside a Biosimulant workspace
+        path.write_text(json.dumps(record, indent=2, sort_keys=True) + '\n')
 
 
 @pytest.fixture(scope='session')
@@ -51,7 +58,7 @@ def adapter_runs(tmp_path_factory):
         key = (name, top_n, tuple(chains or []), fmt)
         if key not in cache:
             root = tmp_path_factory.mktemp(f'{name}-{top_n}')
-            raw = (LAB / 'fixtures' / f'{name}{suffix}').read_bytes()
+            raw = example_path(f'{name}{suffix}').read_bytes()
             cache[key] = predict(raw, fmt, chains or [], top_n, root=root)
         return cache[key]
     return run
